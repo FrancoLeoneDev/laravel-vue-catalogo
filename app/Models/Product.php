@@ -104,15 +104,22 @@ class Product extends Model
     /**
      * Products whose derived stock has fallen to or below their threshold.
      *
-     * Uses HAVING because `current_stock` is a select alias, not a column.
+     * The comparison repeats the subquery in a WHERE rather than filtering the
+     * `current_stock` alias with HAVING. A HAVING without GROUP BY is a MySQL
+     * extension that SQLite rejects outright, and it would also break count(),
+     * which the dashboard relies on.
      *
      * @param  Builder<$this>  $query
      * @return Builder<$this>
      */
     public function scopeLowStock(Builder $query): Builder
     {
-        return $query->withCurrentStock()
-            ->havingRaw('current_stock <= low_stock_threshold');
+        return $query->withCurrentStock()->whereRaw(
+            '(select coalesce(sum(case when type = ? then quantity else -quantity end), 0)'
+            .' from stock_movements where stock_movements.product_id = products.id)'
+            .' <= products.low_stock_threshold',
+            [StockMovementType::Entrada->value],
+        );
     }
 
     /**

@@ -1,0 +1,46 @@
+- generic [ref=f2e5]:
+  - generic [ref=f2e6]:
+    - link "Ingresá al panel" [ref=f2e7] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f2e12]:
+      - heading "Ingresá al panel" [level=1] [ref=f2e13]
+      - paragraph [ref=f2e14]: Gestión de productos, categorías y movimientos de stock
+  - generic [ref=f2e15]:
+    - paragraph [ref=f2e16]: Cuenta de demostración
+    - generic [ref=f2e17]:
+      - generic [ref=f2e18]:
+        - term [ref=f2e19]: Usuario
+        - definition [ref=f2e20]: demo@demo.com
+      - generic [ref=f2e21]:
+        - term [ref=f2e22]: Contraseña
+        - definition [ref=f2e23]: password
+    - paragraph [ref=f2e24]: "Ya están cargadas en el formulario: tocá “Ingresar” y entrás directo."
+  - generic [ref=f2e25]:
+    - button "Ingresar con passkey" [ref=f2e27]
+    - generic [ref=f2e28]: O continuá con tu correo
+  - generic [ref=f2e32]:
+    - generic [ref=f2e33]:
+      - generic [ref=f2e34]:
+        - generic [ref=f2e35]: Correo electrónico
+        - textbox "Correo electrónico" [ref=f2e36]:
+          - /placeholder: correo@ejemplo.com
+          - text: demo@demo.com
+      - generic [ref=f2e37]:
+        - generic [ref=f2e38]:
+          - generic [ref=f2e39]: Contraseña
+          - link "¿Olvidaste tu contraseña?" [ref=f2e40] [cursor=pointer]:
+            - /url: /forgot-password
+        - generic [ref=f2e41]:
+          - textbox "Contraseña" [ref=f2e42]: password
+          - button "Mostrar contraseña" [ref=f2e43]
+      - generic [ref=f2e48]:
+        - checkbox "Mantener la sesión iniciada" [ref=f2e49]
+        - checkbox [ref=f2e50]
+        - generic [ref=f2e51]: Mantener la sesión iniciada
+      - button "Loading Ingresar" [disabled]:
+        - status "Loading"
+        - text: Ingresar
+    - generic [ref=f2e53]:
+      - text: ¿No tenés cuenta?
+      - link "Registrate" [ref=f2e54] [cursor=pointer]:
+        - /url: /register

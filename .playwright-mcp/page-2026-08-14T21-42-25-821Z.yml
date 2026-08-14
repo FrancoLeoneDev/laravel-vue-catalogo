@@ -1,0 +1,292 @@
+- generic [ref=f4e3]:
+  - generic [ref=f4e6]:
+    - list [ref=f4e8]:
+      - listitem [ref=f4e9]:
+        - link "Ferretería Sur" [ref=f4e10] [cursor=pointer]:
+          - /url: /admin
+    - generic [ref=f4e17]:
+      - generic [ref=f4e18]: Gestión
+      - list [ref=f4e19]:
+        - listitem [ref=f4e20]:
+          - link "Panel" [ref=f4e21] [cursor=pointer]:
+            - /url: /admin
+        - listitem [ref=f4e28]:
+          - link "Productos" [ref=f4e29] [cursor=pointer]:
+            - /url: /admin/products
+        - listitem [ref=f4e35]:
+          - link "Categorías" [ref=f4e36] [cursor=pointer]:
+            - /url: /admin/categories
+        - listitem [ref=f4e43]:
+          - link "Movimientos" [ref=f4e44] [cursor=pointer]:
+            - /url: /admin/movements
+    - generic [ref=f4e49]:
+      - list [ref=f4e52]:
+        - listitem [ref=f4e53]:
+          - link "Ver catálogo público" [ref=f4e54] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f4e60]:
+          - link "Código en GitHub" [ref=f4e61] [cursor=pointer]:
+            - /url: https://github.com/FrancoLeoneDev/laravel-vue-catalogo
+      - list [ref=f4e68]:
+        - listitem [ref=f4e69]:
+          - button "UD Usuario Demo" [ref=f4e70]:
+            - generic [ref=f4e71]: UD
+            - generic [ref=f4e73]: Usuario Demo
+  - main [ref=f4e78]:
+    - generic [ref=f4e80]:
+      - button "Toggle sidebar" [ref=f4e81]
+      - navigation "breadcrumb" [ref=f4e83]:
+        - list [ref=f4e84]:
+          - listitem [ref=f4e85]:
+            - link "Productos" [disabled] [ref=f4e86]
+    - generic [ref=f4e87]:
+      - generic [ref=f4e88]:
+        - generic [ref=f4e89]:
+          - heading "Productos" [level=1] [ref=f4e90]
+          - paragraph [ref=f4e91]: 40 productos en el catálogo. El stock se calcula con los movimientos de inventario.
+        - link "Nuevo producto" [ref=f4e92] [cursor=pointer]:
+          - /url: /admin/products/create
+      - generic [ref=f4e93]:
+        - generic [ref=f4e94]:
+          - generic [ref=f4e95]: Buscar productos
+          - searchbox "Buscar productos" [ref=f4e96]
+        - generic [ref=f4e97]:
+          - generic [ref=f4e98]: Filtrar por categoría
+          - combobox "Filtrar por categoría" [ref=f4e99]:
+            - option "Todas las categorías" [selected]
+            - option "Electricidad"
+            - option "Herramientas Eléctricas"
+            - option "Herramientas Manuales"
+            - option "Jardinería"
+            - option "Pinturas y Accesorios"
+            - option "Plomería"
+        - generic [ref=f4e100]:
+          - generic [ref=f4e101]: Filtrar por estado
+          - combobox "Filtrar por estado" [ref=f4e102]:
+            - option "Todos" [selected]
+            - option "Activos"
+            - option "Inactivos"
+      - table [ref=f4e105]:
+        - rowgroup [ref=f4e106]:
+          - row [ref=f4e107]:
+            - columnheader "Producto" [ref=f4e108]
+            - columnheader "Categoría" [ref=f4e109]
+            - columnheader "Precio" [ref=f4e110]
+            - columnheader "Stock" [ref=f4e111]
+            - columnheader "Estado" [ref=f4e112]
+            - columnheader "Acciones" [ref=f4e113]
+        - rowgroup [ref=f4e114]:
+          - row [ref=f4e115]:
+            - cell [ref=f4e116]:
+              - paragraph [ref=f4e117]: Amoladora angular 4.5" 900W
+              - paragraph [ref=f4e118]: HE-2002
+            - cell "Herramientas Eléctricas" [ref=f4e119]
+            - cell "$ 76.500,00" [ref=f4e120]
+            - cell "108 u." [ref=f4e121]
+            - cell "Activo" [ref=f4e124]
+            - cell [ref=f4e126]:
+              - generic [ref=f4e127]:
+                - link "Editar" [ref=f4e128] [cursor=pointer]:
+                  - /url: /admin/products/amoladora-angular-45-900w/edit
+                - button "Eliminar Amoladora angular 4.5\" 900W" [ref=f4e129]
+          - row [ref=f4e130]:
+            - cell [ref=f4e131]:
+              - paragraph [ref=f4e132]: Arco de sierra 12" con hoja bimetálica
+              - paragraph [ref=f4e133]: HM-1006
+            - cell "Herramientas Manuales" [ref=f4e134]
+            - cell "$ 9.850,00" [ref=f4e135]
+            - cell "36 u." [ref=f4e136]
+            - cell "Activo" [ref=f4e139]
+            - cell [ref=f4e141]:
+              - generic [ref=f4e142]:
+                - link "Editar" [ref=f4e143] [cursor=pointer]:
+                  - /url: /admin/products/arco-de-sierra-12-con-hoja-bimetalica/edit
+                - button "Eliminar Arco de sierra 12\" con hoja bimetálica" [ref=f4e144]
+          - row [ref=f4e145]:
+            - cell [ref=f4e146]:
+              - paragraph [ref=f4e147]: Atornillador inalámbrico 12V con 2 baterías
+              - paragraph [ref=f4e148]: HE-2003
+            - cell "Herramientas Eléctricas" [ref=f4e149]
+            - cell "$ 112.000,00" [ref=f4e150]
+            - cell "21 u." [ref=f4e151]
+            - cell "Activo" [ref=f4e154]
+            - cell [ref=f4e156]:
+              - generic [ref=f4e157]:
+                - link "Editar" [ref=f4e158] [cursor=pointer]:
+                  - /url: /admin/products/atornillador-inalambrico-12v-con-2-baterias/edit
+                - button "Eliminar Atornillador inalámbrico 12V con 2 baterías" [ref=f4e159]
+          - row [ref=f4e160]:
+            - cell [ref=f4e161]:
+              - paragraph [ref=f4e162]: Bordeadora eléctrica 1000W
+              - paragraph [ref=f4e163]: JD-6004
+            - cell "Jardinería" [ref=f4e164]
+            - cell "$ 94.500,00" [ref=f4e165]
+            - cell "4 u." [ref=f4e166]
+            - cell "Activo" [ref=f4e169]
+            - cell [ref=f4e171]:
+              - generic [ref=f4e172]:
+                - link "Editar" [ref=f4e173] [cursor=pointer]:
+                  - /url: /admin/products/bordeadora-electrica-1000w/edit
+                - button "Eliminar Bordeadora eléctrica 1000W" [ref=f4e174]
+          - row [ref=f4e175]:
+            - cell [ref=f4e176]:
+              - paragraph [ref=f4e177]: Cable unipolar 2.5mm x 100m
+              - paragraph [ref=f4e178]: EL-3001
+            - cell "Electricidad" [ref=f4e179]
+            - cell "$ 145.000,00" [ref=f4e180]
+            - cell "5 u." [ref=f4e181]
+            - cell "Activo" [ref=f4e184]
+            - cell [ref=f4e186]:
+              - generic [ref=f4e187]:
+                - link "Editar" [ref=f4e188] [cursor=pointer]:
+                  - /url: /admin/products/cable-unipolar-25mm-x-100m/edit
+                - button "Eliminar Cable unipolar 2.5mm x 100m" [ref=f4e189]
+          - row [ref=f4e190]:
+            - cell [ref=f4e191]:
+              - paragraph [ref=f4e192]: Caño PPR fusión 20mm x 4m
+              - paragraph [ref=f4e193]: PL-4001
+            - cell "Plomería" [ref=f4e194]
+            - cell "$ 8.600,00" [ref=f4e195]
+            - cell "10 u." [ref=f4e196]
+            - cell "Activo" [ref=f4e199]
+            - cell [ref=f4e201]:
+              - generic [ref=f4e202]:
+                - link "Editar" [ref=f4e203] [cursor=pointer]:
+                  - /url: /admin/products/cano-ppr-fusion-20mm-x-4m/edit
+                - button "Eliminar Caño PPR fusión 20mm x 4m" [ref=f4e204]
+          - row [ref=f4e205]:
+            - cell [ref=f4e206]:
+              - paragraph [ref=f4e207]: Carretilla 90 litros rueda neumática
+              - paragraph [ref=f4e208]: JD-6005
+            - cell "Jardinería" [ref=f4e209]
+            - cell "$ 78.900,00" [ref=f4e210]
+            - cell "87 u." [ref=f4e211]
+            - cell "Activo" [ref=f4e214]
+            - cell [ref=f4e216]:
+              - generic [ref=f4e217]:
+                - link "Editar" [ref=f4e218] [cursor=pointer]:
+                  - /url: /admin/products/carretilla-90-litros-rueda-neumatica/edit
+                - button "Eliminar Carretilla 90 litros rueda neumática" [ref=f4e219]
+          - row [ref=f4e220]:
+            - cell [ref=f4e221]:
+              - paragraph [ref=f4e222]: Cinta de papel para pintor 24mm x 40m
+              - paragraph [ref=f4e223]: PI-5006
+            - cell "Pinturas y Accesorios" [ref=f4e224]
+            - cell "$ 2.900,00" [ref=f4e225]
+            - cell "139 u." [ref=f4e226]
+            - cell "Activo" [ref=f4e229]
+            - cell [ref=f4e231]:
+              - generic [ref=f4e232]:
+                - link "Editar" [ref=f4e233] [cursor=pointer]:
+                  - /url: /admin/products/cinta-de-papel-para-pintor-24mm-x-40m/edit
+                - button "Eliminar Cinta de papel para pintor 24mm x 40m" [ref=f4e234]
+          - row [ref=f4e235]:
+            - cell [ref=f4e236]:
+              - paragraph [ref=f4e237]: Cinta métrica 5m carcasa reforzada
+              - paragraph [ref=f4e238]: HM-1007
+            - cell "Herramientas Manuales" [ref=f4e239]
+            - cell "$ 6.200,00" [ref=f4e240]
+            - cell "5 u." [ref=f4e241]
+            - cell "Inactivo" [ref=f4e244]
+            - cell [ref=f4e246]:
+              - generic [ref=f4e247]:
+                - link "Editar" [ref=f4e248] [cursor=pointer]:
+                  - /url: /admin/products/cinta-metrica-5m-carcasa-reforzada/edit
+                - button "Eliminar Cinta métrica 5m carcasa reforzada" [ref=f4e249]
+          - row [ref=f4e250]:
+            - cell [ref=f4e251]:
+              - paragraph [ref=f4e252]: Cinta teflón 12mm x 10m
+              - paragraph [ref=f4e253]: PL-4007
+            - cell "Plomería" [ref=f4e254]
+            - cell "$ 900,00" [ref=f4e255]
+            - cell "12 u." [ref=f4e256]
+            - cell "Activo" [ref=f4e259]
+            - cell [ref=f4e261]:
+              - generic [ref=f4e262]:
+                - link "Editar" [ref=f4e263] [cursor=pointer]:
+                  - /url: /admin/products/cinta-teflon-12mm-x-10m/edit
+                - button "Eliminar Cinta teflón 12mm x 10m" [ref=f4e264]
+          - row [ref=f4e265]:
+            - cell [ref=f4e266]:
+              - paragraph [ref=f4e267]: Codo PVC 110mm 90 grados
+              - paragraph [ref=f4e268]: PL-4004
+            - cell "Plomería" [ref=f4e269]
+            - cell "$ 3.900,00" [ref=f4e270]
+            - cell "Sin stock" [ref=f4e271]
+            - cell "Activo" [ref=f4e274]
+            - cell [ref=f4e276]:
+              - generic [ref=f4e277]:
+                - link "Editar" [ref=f4e278] [cursor=pointer]:
+                  - /url: /admin/products/codo-pvc-110mm-90-grados/edit
+                - button "Eliminar Codo PVC 110mm 90 grados" [ref=f4e279]
+          - row [ref=f4e280]:
+            - cell [ref=f4e281]:
+              - paragraph [ref=f4e282]: Disyuntor diferencial 2x40A 30mA
+              - paragraph [ref=f4e283]: EL-3003
+            - cell "Electricidad" [ref=f4e284]
+            - cell "$ 34.500,00" [ref=f4e285]
+            - cell "20 u." [ref=f4e286]
+            - cell "Activo" [ref=f4e289]
+            - cell [ref=f4e291]:
+              - generic [ref=f4e292]:
+                - link "Editar" [ref=f4e293] [cursor=pointer]:
+                  - /url: /admin/products/disyuntor-diferencial-2x40a-30ma/edit
+                - button "Eliminar Disyuntor diferencial 2x40A 30mA" [ref=f4e294]
+          - row [ref=f4e295]:
+            - cell [ref=f4e296]:
+              - paragraph [ref=f4e297]: Enduido plástico interior 10kg
+              - paragraph [ref=f4e298]: PI-5005
+            - cell "Pinturas y Accesorios" [ref=f4e299]
+            - cell "$ 32.900,00" [ref=f4e300]
+            - cell "82 u." [ref=f4e301]
+            - cell "Activo" [ref=f4e304]
+            - cell [ref=f4e306]:
+              - generic [ref=f4e307]:
+                - link "Editar" [ref=f4e308] [cursor=pointer]:
+                  - /url: /admin/products/enduido-plastico-interior-10kg/edit
+                - button "Eliminar Enduido plástico interior 10kg" [ref=f4e309]
+          - row [ref=f4e310]:
+            - cell [ref=f4e311]:
+              - paragraph [ref=f4e312]: Esmalte sintético brillante 1L
+              - paragraph [ref=f4e313]: PI-5002
+            - cell "Pinturas y Accesorios" [ref=f4e314]
+            - cell "$ 21.400,00" [ref=f4e315]
+            - cell "164 u." [ref=f4e316]
+            - cell "Activo" [ref=f4e319]
+            - cell [ref=f4e321]:
+              - generic [ref=f4e322]:
+                - link "Editar" [ref=f4e323] [cursor=pointer]:
+                  - /url: /admin/products/esmalte-sintetico-brillante-1l/edit
+                - button "Eliminar Esmalte sintético brillante 1L" [ref=f4e324]
+          - row [ref=f4e325]:
+            - cell [ref=f4e326]:
+              - paragraph [ref=f4e327]: Flexible acero inoxidable 1/2" 40cm
+              - paragraph [ref=f4e328]: PL-4003
+            - cell "Plomería" [ref=f4e329]
+            - cell "$ 4.300,00" [ref=f4e330]
+            - cell "52 u." [ref=f4e331]
+            - cell "Activo" [ref=f4e334]
+            - cell [ref=f4e336]:
+              - generic [ref=f4e337]:
+                - link "Editar" [ref=f4e338] [cursor=pointer]:
+                  - /url: /admin/products/flexible-acero-inoxidable-12-40cm/edit
+                - button "Eliminar Flexible acero inoxidable 1/2\" 40cm" [ref=f4e339]
+      - navigation "Paginación" [ref=f4e340]:
+        - paragraph [ref=f4e341]: Mostrando 1–15 de 40
+        - list [ref=f4e342]:
+          - listitem [ref=f4e343]:
+            - generic [ref=f4e344]: Anterior
+          - listitem [ref=f4e345]:
+            - link "1" [ref=f4e346] [cursor=pointer]:
+              - /url: https://laravel-vue-catalogo.vercel.app/admin/products?page=1
+          - listitem [ref=f4e347]:
+            - link "2" [ref=f4e348] [cursor=pointer]:
+              - /url: https://laravel-vue-catalogo.vercel.app/admin/products?page=2
+          - listitem [ref=f4e349]:
+            - link "3" [ref=f4e350] [cursor=pointer]:
+              - /url: https://laravel-vue-catalogo.vercel.app/admin/products?page=3
+          - listitem [ref=f4e351]:
+            - link "Siguiente" [ref=f4e352] [cursor=pointer]:
+              - /url: https://laravel-vue-catalogo.vercel.app/admin/products?page=2
+  - region "Notifications alt+T":
+    - list

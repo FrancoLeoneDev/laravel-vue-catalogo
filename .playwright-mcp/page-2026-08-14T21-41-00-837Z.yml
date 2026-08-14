@@ -1,0 +1,227 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - link "Ferretería Sur Catálogo" [ref=f1e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f1e12]:
+          - generic [ref=f1e13]: Ferretería Sur
+          - generic [ref=f1e14]: Catálogo
+      - generic [ref=f1e15]:
+        - generic [ref=f1e16]:
+          - button "Claro" [ref=f1e17]
+          - button "Oscuro" [ref=f1e25]
+          - button "Sistema" [ref=f1e29]
+        - link "Ingresar al panel" [ref=f1e33] [cursor=pointer]:
+          - /url: /login
+  - main [ref=f1e34]:
+    - generic [ref=f1e36]:
+      - paragraph [ref=f1e37]: Catálogo · 38 productos
+      - heading "Herramientas, materiales y repuestos con stock al día." [level=1] [ref=f1e38]
+      - generic [ref=f1e39]:
+        - generic [ref=f1e40]:
+          - generic [ref=f1e41]: Buscar productos
+          - searchbox "Buscar productos" [ref=f1e42]
+        - generic [ref=f1e43]:
+          - generic [ref=f1e44]: Ordenar por
+          - combobox "Ordenar por" [ref=f1e45]:
+            - option "Nombre (A–Z)" [selected]
+            - 'option "Precio: menor a mayor"'
+            - 'option "Precio: mayor a menor"'
+            - option "Más recientes"
+      - generic [ref=f1e46]:
+        - link "Todos" [ref=f1e47] [cursor=pointer]:
+          - /url: /
+        - link "Electricidad 7" [ref=f1e48] [cursor=pointer]:
+          - /url: /?category=electricidad
+          - text: Electricidad
+          - generic [ref=f1e49]: "7"
+        - link "Herramientas Eléctricas 7" [ref=f1e50] [cursor=pointer]:
+          - /url: /?category=herramientas-electricas
+          - text: Herramientas Eléctricas
+          - generic [ref=f1e51]: "7"
+        - link "Herramientas Manuales 6" [ref=f1e52] [cursor=pointer]:
+          - /url: /?category=herramientas-manuales
+          - text: Herramientas Manuales
+          - generic [ref=f1e53]: "6"
+        - link "Jardinería 5" [ref=f1e54] [cursor=pointer]:
+          - /url: /?category=jardineria
+          - text: Jardinería
+          - generic [ref=f1e55]: "5"
+        - link "Pinturas y Accesorios 6" [ref=f1e56] [cursor=pointer]:
+          - /url: /?category=pinturas-y-accesorios
+          - text: Pinturas y Accesorios
+          - generic [ref=f1e57]: "6"
+        - link "Plomería 7" [ref=f1e58] [cursor=pointer]:
+          - /url: /?category=plomeria
+          - text: Plomería
+          - generic [ref=f1e59]: "7"
+    - generic [ref=f1e60]:
+      - generic [ref=f1e61]:
+        - article [ref=f1e62]:
+          - generic [ref=f1e65]:
+            - generic [ref=f1e66]:
+              - generic [ref=f1e67]: Herramientas Eléctricas
+              - generic [ref=f1e68]: HE-2002
+            - heading [level=3] [ref=f1e69]:
+              - link "Amoladora angular 4.5\" 900W" [ref=f1e70] [cursor=pointer]:
+                - /url: /productos/amoladora-angular-45-900w
+            - paragraph [ref=f1e71]: Amoladora de 115mm y 900W con arranque suave, protector regulable sin herramientas y bloqueo de eje.
+            - generic [ref=f1e72]:
+              - paragraph [ref=f1e73]: $ 76.500,00
+              - paragraph [ref=f1e74]: 108 u. disponibles
+        - article [ref=f1e75]:
+          - generic [ref=f1e78]:
+            - generic [ref=f1e79]:
+              - generic [ref=f1e80]: Herramientas Manuales
+              - generic [ref=f1e81]: HM-1006
+            - heading [level=3] [ref=f1e82]:
+              - link "Arco de sierra 12\" con hoja bimetálica" [ref=f1e83] [cursor=pointer]:
+                - /url: /productos/arco-de-sierra-12-con-hoja-bimetalica
+            - paragraph [ref=f1e84]: Arco de sierra con tensor rápido, mango cerrado y hoja bimetálica de 24 dientes por pulgada incluida.
+            - generic [ref=f1e85]:
+              - paragraph [ref=f1e86]: $ 9.850,00
+              - paragraph [ref=f1e87]: 36 u. disponibles
+        - article [ref=f1e88]:
+          - generic [ref=f1e91]:
+            - generic [ref=f1e92]:
+              - generic [ref=f1e93]: Herramientas Eléctricas
+              - generic [ref=f1e94]: HE-2003
+            - heading [level=3] [ref=f1e95]:
+              - link "Atornillador inalámbrico 12V con 2 baterías" [ref=f1e96] [cursor=pointer]:
+                - /url: /productos/atornillador-inalambrico-12v-con-2-baterias
+            - paragraph [ref=f1e97]: Atornillador a batería de litio 12V, torque regulable en 18 posiciones, incluye dos baterías y cargador rápido.
+            - generic [ref=f1e98]:
+              - paragraph [ref=f1e99]: $ 112.000,00
+              - paragraph [ref=f1e100]: 21 u. disponibles
+        - article [ref=f1e101]:
+          - generic [ref=f1e104]:
+            - generic [ref=f1e105]:
+              - generic [ref=f1e106]: Jardinería
+              - generic [ref=f1e107]: JD-6004
+            - heading [level=3] [ref=f1e108]:
+              - link "Bordeadora eléctrica 1000W" [ref=f1e109] [cursor=pointer]:
+                - /url: /productos/bordeadora-electrica-1000w
+            - paragraph [ref=f1e110]: Bordeadora eléctrica de 1000W con cabezal de nylon de golpe, mango regulable y protector de corte.
+            - generic [ref=f1e111]:
+              - paragraph [ref=f1e112]: $ 94.500,00
+              - paragraph [ref=f1e113]: Últimas 4 u.
+        - article [ref=f1e114]:
+          - generic [ref=f1e117]:
+            - generic [ref=f1e118]:
+              - generic [ref=f1e119]: Electricidad
+              - generic [ref=f1e120]: EL-3001
+            - heading [level=3] [ref=f1e121]:
+              - link "Cable unipolar 2.5mm x 100m" [ref=f1e122] [cursor=pointer]:
+                - /url: /productos/cable-unipolar-25mm-x-100m
+            - paragraph [ref=f1e123]: Rollo de 100 metros de cable unipolar de 2.5mm², normalizado IRAM, aislación de PVC antillama.
+            - generic [ref=f1e124]:
+              - paragraph [ref=f1e125]: $ 145.000,00
+              - paragraph [ref=f1e126]: Últimas 5 u.
+        - article [ref=f1e127]:
+          - generic [ref=f1e130]:
+            - generic [ref=f1e131]:
+              - generic [ref=f1e132]: Plomería
+              - generic [ref=f1e133]: PL-4001
+            - heading [level=3] [ref=f1e134]:
+              - link "Caño PPR fusión 20mm x 4m" [ref=f1e135] [cursor=pointer]:
+                - /url: /productos/cano-ppr-fusion-20mm-x-4m
+            - paragraph [ref=f1e136]: Barra de 4 metros de caño PPR de 20mm para agua fría y caliente, apto termofusión, presión nominal 20.
+            - generic [ref=f1e137]:
+              - paragraph [ref=f1e138]: $ 8.600,00
+              - paragraph [ref=f1e139]: Últimas 10 u.
+        - article [ref=f1e140]:
+          - generic [ref=f1e143]:
+            - generic [ref=f1e144]:
+              - generic [ref=f1e145]: Jardinería
+              - generic [ref=f1e146]: JD-6005
+            - heading [level=3] [ref=f1e147]:
+              - link "Carretilla 90 litros rueda neumática" [ref=f1e148] [cursor=pointer]:
+                - /url: /productos/carretilla-90-litros-rueda-neumatica
+            - paragraph [ref=f1e149]: Carretilla de chapa reforzada de 90 litros con rueda neumática y bastidor pintado al horno.
+            - generic [ref=f1e150]:
+              - paragraph [ref=f1e151]: $ 78.900,00
+              - paragraph [ref=f1e152]: 87 u. disponibles
+        - article [ref=f1e153]:
+          - generic [ref=f1e156]:
+            - generic [ref=f1e157]:
+              - generic [ref=f1e158]: Pinturas y Accesorios
+              - generic [ref=f1e159]: PI-5006
+            - heading [level=3] [ref=f1e160]:
+              - link "Cinta de papel para pintor 24mm x 40m" [ref=f1e161] [cursor=pointer]:
+                - /url: /productos/cinta-de-papel-para-pintor-24mm-x-40m
+            - paragraph [ref=f1e162]: Cinta de papel enmascarar de 24mm, remoción limpia hasta 7 días, apta para bordes prolijos.
+            - generic [ref=f1e163]:
+              - paragraph [ref=f1e164]: $ 2.900,00
+              - paragraph [ref=f1e165]: 139 u. disponibles
+        - article [ref=f1e166]:
+          - generic [ref=f1e169]:
+            - generic [ref=f1e170]:
+              - generic [ref=f1e171]: Plomería
+              - generic [ref=f1e172]: PL-4007
+            - heading [level=3] [ref=f1e173]:
+              - link "Cinta teflón 12mm x 10m" [ref=f1e174] [cursor=pointer]:
+                - /url: /productos/cinta-teflon-12mm-x-10m
+            - paragraph [ref=f1e175]: Cinta selladora de teflón para roscas, 12mm de ancho por 10 metros, densidad estándar.
+            - generic [ref=f1e176]:
+              - paragraph [ref=f1e177]: $ 900,00
+              - paragraph [ref=f1e178]: Últimas 12 u.
+        - article [ref=f1e179]:
+          - generic [ref=f1e181]:
+            - generic [ref=f1e182]:
+              - generic [ref=f1e183]: Plomería
+              - generic [ref=f1e184]: PL-4004
+            - heading [level=3] [ref=f1e185]:
+              - link "Codo PVC 110mm 90 grados" [ref=f1e186] [cursor=pointer]:
+                - /url: /productos/codo-pvc-110mm-90-grados
+            - paragraph [ref=f1e187]: Codo de PVC de 110mm a 90 grados para desagüe cloacal, unión por junta elástica.
+            - generic [ref=f1e188]:
+              - paragraph [ref=f1e189]: $ 3.900,00
+              - paragraph [ref=f1e190]: Sin stock
+        - article [ref=f1e191]:
+          - generic [ref=f1e194]:
+            - generic [ref=f1e195]:
+              - generic [ref=f1e196]: Electricidad
+              - generic [ref=f1e197]: EL-3003
+            - heading [level=3] [ref=f1e198]:
+              - link "Disyuntor diferencial 2x40A 30mA" [ref=f1e199] [cursor=pointer]:
+                - /url: /productos/disyuntor-diferencial-2x40a-30ma
+            - paragraph [ref=f1e200]: Disyuntor diferencial bipolar de 40A con sensibilidad de 30mA para protección de personas.
+            - generic [ref=f1e201]:
+              - paragraph [ref=f1e202]: $ 34.500,00
+              - paragraph [ref=f1e203]: 20 u. disponibles
+        - article [ref=f1e204]:
+          - generic [ref=f1e207]:
+            - generic [ref=f1e208]:
+              - generic [ref=f1e209]: Pinturas y Accesorios
+              - generic [ref=f1e210]: PI-5005
+            - heading [level=3] [ref=f1e211]:
+              - link "Enduido plástico interior 10kg" [ref=f1e212] [cursor=pointer]:
+                - /url: /productos/enduido-plastico-interior-10kg
+            - paragraph [ref=f1e213]: Enduido plástico listo para usar, ideal para nivelar paredes interiores antes de pintar.
+            - generic [ref=f1e214]:
+              - paragraph [ref=f1e215]: $ 32.900,00
+              - paragraph [ref=f1e216]: 82 u. disponibles
+      - navigation "Paginación" [ref=f1e218]:
+        - paragraph [ref=f1e219]: Mostrando 1–12 de 38
+        - list [ref=f1e220]:
+          - listitem [ref=f1e221]:
+            - generic [ref=f1e222]: Anterior
+          - listitem [ref=f1e223]:
+            - link "1" [ref=f1e224] [cursor=pointer]:
+              - /url: https://laravel-vue-catalogo.vercel.app/?page=1
+          - listitem [ref=f1e225]:
+            - link "2" [ref=f1e226] [cursor=pointer]:
+              - /url: https://laravel-vue-catalogo.vercel.app/?page=2
+          - listitem [ref=f1e227]:
+            - link "3" [ref=f1e228] [cursor=pointer]:
+              - /url: https://laravel-vue-catalogo.vercel.app/?page=3
+          - listitem [ref=f1e229]:
+            - link "4" [ref=f1e230] [cursor=pointer]:
+              - /url: https://laravel-vue-catalogo.vercel.app/?page=4
+          - listitem [ref=f1e231]:
+            - link "Siguiente" [ref=f1e232] [cursor=pointer]:
+              - /url: https://laravel-vue-catalogo.vercel.app/?page=2
+  - contentinfo [ref=f1e233]:
+    - generic [ref=f1e234]:
+      - paragraph [ref=f1e235]: © 2026 Ferretería Sur — catálogo de demostración.
+      - paragraph [ref=f1e236]: Laravel · Inertia · Vue 3 · MySQL · Tailwind

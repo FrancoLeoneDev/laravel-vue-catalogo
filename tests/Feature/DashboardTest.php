@@ -16,12 +16,14 @@ class DashboardTest extends TestCase
         $response->assertRedirect(route('login'));
     }
 
-    public function test_authenticated_users_can_visit_the_dashboard()
+    public function test_authenticated_users_are_sent_to_the_inventory_panel()
     {
         $user = User::factory()->create();
         $this->actingAs($user);
 
+        // routes/web.php intentionally redirects the starter kit's `dashboard`
+        // route to the inventory panel; there is no standalone dashboard page.
         $response = $this->get(route('dashboard'));
-        $response->assertOk();
+        $response->assertRedirect(route('admin.dashboard'));
     }
 }
