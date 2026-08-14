@@ -20,10 +20,10 @@ class CategoryFactory extends Factory
      */
     public function definition(): array
     {
-        $name = fake()->unique()->words(2, true);
+        $name = Str::ucfirst(fake()->word().' '.fake()->word());
 
         return [
-            'name' => Str::ucfirst($name),
+            'name' => $name,
             'slug' => Str::slug($name).'-'.Str::lower(Str::random(4)),
             'description' => fake()->sentence(12),
         ];

@@ -21,11 +21,11 @@ class ProductFactory extends Factory
      */
     public function definition(): array
     {
-        $name = fake()->unique()->words(3, true);
+        $name = Str::ucfirst(fake()->word().' '.fake()->word().' '.fake()->word());
 
         return [
             'category_id' => Category::factory(),
-            'name' => Str::ucfirst($name),
+            'name' => $name,
             'slug' => Str::slug($name).'-'.Str::lower(Str::random(4)),
             'description' => fake()->paragraph(),
             'price' => fake()->randomFloat(2, 500, 90000),

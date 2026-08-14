@@ -12,8 +12,14 @@ const props = withDefaults(
 );
 
 const level = computed(() => {
-    if (props.stock <= 0) return 'out';
-    if (props.stock <= props.threshold) return 'low';
+    if (props.stock <= 0) {
+        return 'out';
+    }
+
+    if (props.stock <= props.threshold) {
+        return 'low';
+    }
+
     return 'ok';
 });
 
@@ -27,11 +33,17 @@ const classes = computed(
 );
 
 const label = computed(() => {
-    if (level.value === 'out') return 'Sin stock';
+    if (level.value === 'out') {
+        return 'Sin stock';
+    }
 
     const units = `${formatNumber(props.stock)} u.`;
 
-    return props.showUnits ? units : level.value === 'low' ? 'Stock bajo' : 'En stock';
+    return props.showUnits
+        ? units
+        : level.value === 'low'
+          ? 'Stock bajo'
+          : 'En stock';
 });
 </script>
 

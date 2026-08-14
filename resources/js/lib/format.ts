@@ -21,7 +21,9 @@ const dateOnly = new Intl.DateTimeFormat('es-AR', {
 });
 
 export function formatPrice(value: string | number): string {
-    return currency.format(typeof value === 'string' ? Number.parseFloat(value) : value);
+    return currency.format(
+        typeof value === 'string' ? Number.parseFloat(value) : value,
+    );
 }
 
 export function formatNumber(value: number): string {

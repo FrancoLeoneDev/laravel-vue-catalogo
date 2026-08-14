@@ -36,7 +36,11 @@ function applyFilters(overrides: Record<string, string>) {
 
     router.get(
         home().url,
-        Object.fromEntries(Object.entries(query).filter(([, value]) => value !== '' && value !== 'name')),
+        Object.fromEntries(
+            Object.entries(query).filter(
+                ([, value]) => value !== '' && value !== 'name',
+            ),
+        ),
         { preserveState: true, preserveScroll: true, replace: true },
     );
 }
@@ -93,14 +97,17 @@ watch(search, () => {
                 </div>
 
                 <div class="sm:w-56">
-                    <label for="catalog-sort" class="sr-only">Ordenar por</label>
+                    <label for="catalog-sort" class="sr-only"
+                        >Ordenar por</label
+                    >
                     <select
                         id="catalog-sort"
                         :value="filters.sort"
                         class="h-12 w-full rounded-md border border-border bg-background px-3 text-sm focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-ring/30 focus-visible:outline-none"
                         @change="
                             applyFilters({
-                                sort: ($event.target as HTMLSelectElement).value,
+                                sort: ($event.target as HTMLSelectElement)
+                                    .value,
                             })
                         "
                     >
@@ -118,7 +125,10 @@ watch(search, () => {
             <!-- Category filter as links, so every view is a shareable URL. -->
             <div class="mt-5 flex flex-wrap items-center gap-2">
                 <Link
-                    :href="home({ query: { search: filters.search || undefined } }).url"
+                    :href="
+                        home({ query: { search: filters.search || undefined } })
+                            .url
+                    "
                     preserve-scroll
                     class="inline-flex h-8 items-center rounded-full border px-3.5 text-sm transition-colors"
                     :class="
@@ -175,7 +185,8 @@ watch(search, () => {
         >
             <p class="text-base font-medium">No encontramos productos</p>
             <p class="mx-auto mt-1 max-w-sm text-sm text-muted-foreground">
-                Probá con otro término de búsqueda o quitá el filtro de categoría.
+                Probá con otro término de búsqueda o quitá el filtro de
+                categoría.
             </p>
             <Link
                 :href="home().url"

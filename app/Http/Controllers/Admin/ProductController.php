@@ -11,6 +11,7 @@ use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -132,9 +133,9 @@ class ProductController extends Controller
     }
 
     /**
-     * @return \Illuminate\Support\Collection<int, Category>
+     * @return Collection<int, Category>
      */
-    private function categoryOptions(): \Illuminate\Support\Collection
+    private function categoryOptions(): Collection
     {
         return Category::query()->orderBy('name')->get(['id', 'name', 'slug']);
     }

@@ -11,8 +11,14 @@ const stock = computed(() => props.product.current_stock ?? 0);
 const threshold = computed(() => props.product.low_stock_threshold);
 
 const level = computed(() => {
-    if (stock.value <= 0) return 'out';
-    if (stock.value <= threshold.value) return 'low';
+    if (stock.value <= 0) {
+        return 'out';
+    }
+
+    if (stock.value <= threshold.value) {
+        return 'low';
+    }
+
     return 'ok';
 });
 
@@ -36,8 +42,13 @@ const railColor = computed(
 );
 
 const stockLabel = computed(() => {
-    if (level.value === 'out') return 'Sin stock';
-    if (level.value === 'low') return `Últimas ${formatNumber(stock.value)} u.`;
+    if (level.value === 'out') {
+        return 'Sin stock';
+    }
+
+    if (level.value === 'low') {
+        return `Últimas ${formatNumber(stock.value)} u.`;
+    }
 
     return `${formatNumber(stock.value)} u. disponibles`;
 });

@@ -80,7 +80,9 @@ const year = new Date().getFullYear();
             <div
                 class="mx-auto flex w-full max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-6"
             >
-                <p>&copy; {{ year }} Ferretería Sur — catálogo de demostración.</p>
+                <p>
+                    &copy; {{ year }} Ferretería Sur — catálogo de demostración.
+                </p>
                 <p class="font-mono text-xs">
                     Laravel · Inertia · Vue 3 · MySQL · Tailwind
                 </p>

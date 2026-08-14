@@ -53,24 +53,33 @@ const demo = {
         </p>
         <dl class="mt-2.5 space-y-1 text-sm">
             <div class="flex items-baseline gap-2">
-                <dt class="w-20 shrink-0 text-emerald-800/70 dark:text-emerald-300/70">
+                <dt
+                    class="w-20 shrink-0 text-emerald-800/70 dark:text-emerald-300/70"
+                >
                     Usuario
                 </dt>
-                <dd class="font-mono font-medium text-emerald-900 dark:text-emerald-100">
+                <dd
+                    class="font-mono font-medium text-emerald-900 dark:text-emerald-100"
+                >
                     {{ demo.email }}
                 </dd>
             </div>
             <div class="flex items-baseline gap-2">
-                <dt class="w-20 shrink-0 text-emerald-800/70 dark:text-emerald-300/70">
+                <dt
+                    class="w-20 shrink-0 text-emerald-800/70 dark:text-emerald-300/70"
+                >
                     Contraseña
                 </dt>
-                <dd class="font-mono font-medium text-emerald-900 dark:text-emerald-100">
+                <dd
+                    class="font-mono font-medium text-emerald-900 dark:text-emerald-100"
+                >
                     {{ demo.password }}
                 </dd>
             </div>
         </dl>
         <p class="mt-3 text-xs text-emerald-800/80 dark:text-emerald-300/80">
-            Ya están cargadas en el formulario: tocá “Ingresar” y entrás directo.
+            Ya están cargadas en el formulario: tocá “Ingresar” y entrás
+            directo.
         </p>
     </div>
 

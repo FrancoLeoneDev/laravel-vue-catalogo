@@ -22,7 +22,10 @@ const categoryHref = computed(
     <Head :title="product.name" />
 
     <div class="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
-        <nav aria-label="Migas de pan" class="mb-8 text-sm text-muted-foreground">
+        <nav
+            aria-label="Migas de pan"
+            class="mb-8 text-sm text-muted-foreground"
+        >
             <ol class="flex flex-wrap items-center gap-1.5">
                 <li>
                     <Link :href="home().url" class="hover:text-foreground"
@@ -86,7 +89,9 @@ const categoryHref = computed(
                     {{ product.name }}
                 </h1>
 
-                <p class="mt-5 text-3xl font-semibold tracking-tight tabular-nums">
+                <p
+                    class="mt-5 text-3xl font-semibold tracking-tight tabular-nums"
+                >
                     {{ formatPrice(product.price) }}
                 </p>
 
@@ -113,7 +118,9 @@ const categoryHref = computed(
                         >
                             SKU
                         </dt>
-                        <dd class="mt-1 font-mono text-sm">{{ product.sku }}</dd>
+                        <dd class="mt-1 font-mono text-sm">
+                            {{ product.sku }}
+                        </dd>
                     </div>
                     <div class="bg-card p-4">
                         <dt
@@ -121,7 +128,9 @@ const categoryHref = computed(
                         >
                             Rubro
                         </dt>
-                        <dd class="mt-1 text-sm">{{ product.category?.name }}</dd>
+                        <dd class="mt-1 text-sm">
+                            {{ product.category?.name }}
+                        </dd>
                     </div>
                 </dl>
 

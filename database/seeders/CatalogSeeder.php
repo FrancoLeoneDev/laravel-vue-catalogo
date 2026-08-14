@@ -23,7 +23,7 @@ class CatalogSeeder extends Seeder
     {
         // Idempotent so `migrate --force --seed` is safe to run on every deploy.
         if (Category::query()->exists()) {
-            $this->command?->info('El catálogo ya tiene datos: se omite el seeder.');
+            $this->command->info('El catálogo ya tiene datos: se omite el seeder.');
 
             return;
         }

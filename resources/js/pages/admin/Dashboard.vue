@@ -131,7 +131,10 @@ const cards = [
                     </li>
                 </ul>
 
-                <p v-else class="px-5 py-10 text-center text-sm text-muted-foreground">
+                <p
+                    v-else
+                    class="px-5 py-10 text-center text-sm text-muted-foreground"
+                >
                     Ningún producto llegó a su umbral de stock.
                 </p>
             </section>
@@ -169,7 +172,9 @@ const cards = [
                             <p class="truncate text-sm font-medium">
                                 {{ movement.product?.name }}
                             </p>
-                            <p class="mt-0.5 truncate text-xs text-muted-foreground">
+                            <p
+                                class="mt-0.5 truncate text-xs text-muted-foreground"
+                            >
                                 {{ movement.reason }} ·
                                 {{ formatDateTime(movement.occurred_at) }}
                             </p>
@@ -188,7 +193,10 @@ const cards = [
                     </li>
                 </ul>
 
-                <p v-else class="px-5 py-10 text-center text-sm text-muted-foreground">
+                <p
+                    v-else
+                    class="px-5 py-10 text-center text-sm text-muted-foreground"
+                >
                     Todavía no hay movimientos registrados.
                 </p>
             </section>

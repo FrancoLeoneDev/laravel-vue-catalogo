@@ -63,8 +63,8 @@ return [
                 // Managed MySQL providers require TLS. The CA path is stored
                 // relative to the project so it resolves the same way locally
                 // and on the deployment platform.
-                Mysql::ATTR_SSL_CA => ($ca = env('MYSQL_ATTR_SSL_CA'))
-                    ? (str_starts_with($ca, '/') || preg_match('/^[A-Za-z]:/', $ca) ? $ca : base_path($ca))
+                Mysql::ATTR_SSL_CA => is_string($ca = env('MYSQL_ATTR_SSL_CA')) && $ca !== ''
+                    ? (str_starts_with($ca, '/') || preg_match('/^[A-Za-z]:/', $ca) === 1 ? $ca : base_path($ca))
                     : null,
             ]) : [],
         ],
