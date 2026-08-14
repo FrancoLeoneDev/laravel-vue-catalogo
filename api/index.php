@@ -47,5 +47,19 @@ try {
     // Temporary: the platform log viewer truncates the message.
     http_response_code(500);
     header('Content-Type: text/plain; charset=utf-8');
-    echo get_class($e).': '.$e->getMessage()."\n\n".$e->getTraceAsString();
+    echo get_class($e).': '.$e->getMessage()."\n\n";
+
+    $base = __DIR__.'/../';
+    echo "cache dir exists: ".var_export(is_dir($base.'bootstrap/cache'), true)."\n";
+    echo "cache writable:   ".var_export(is_writable($base.'bootstrap/cache'), true)."\n";
+    echo "cache contents:   ".implode(', ', array_diff(@scandir($base.'bootstrap/cache') ?: [], ['.', '..']))."\n";
+    echo "providers.php:    ".var_export(is_file($base.'bootstrap/providers.php'), true)."\n";
+    echo "installed.json:   ".var_export(is_file($base.'vendor/composer/installed.json'), true)."\n";
+    echo "pail installed:   ".var_export(
+        is_file($base.'vendor/composer/installed.json')
+            && str_contains((string) @file_get_contents($base.'vendor/composer/installed.json'), 'laravel/pail'),
+        true
+    )."\n\n";
+
+    echo $e->getTraceAsString();
 }
