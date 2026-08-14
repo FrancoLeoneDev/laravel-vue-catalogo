@@ -41,4 +41,11 @@ if (! is_writable(__DIR__.'/../storage/framework')) {
     $app->useStoragePath($storagePath);
 }
 
-$app->handleRequest(Request::capture());
+try {
+    $app->handleRequest(Request::capture());
+} catch (Throwable $e) {
+    // Temporary: the platform log viewer truncates the message.
+    http_response_code(500);
+    header('Content-Type: text/plain; charset=utf-8');
+    echo get_class($e).': '.$e->getMessage()."\n\n".$e->getTraceAsString();
+}
