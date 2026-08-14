@@ -1,0 +1,23 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: catalogo-mysql
+    restart: unless-stopped
+    ports:
+      - '${DB_PORT:-3307}:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: '${DB_PASSWORD:-secret}'
+      MYSQL_DATABASE: '${DB_DATABASE:-catalogo}'
+      MYSQL_USER: '${DB_USERNAME:-catalogo}'
+      MYSQL_PASSWORD: '${DB_PASSWORD:-secret}'
+    volumes:
+      - catalogo-mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost', '-p${DB_PASSWORD:-secret}']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  catalogo-mysql-data:
+    driver: local
