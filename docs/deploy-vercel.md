@@ -120,8 +120,19 @@ plain text**, because Vercel does not execute it; the front controller is now
 
 This is a real source-code leak and it is invisible from the homepage.
 
+**A `.vercelignore` disables `.gitignore`.** Once the file exists, Vercel stops applying
+`.gitignore`, so everything local is uploaded unless listed. That includes `.env` — its
+secrets ship with the bundle, and any variable the dashboard does not set is shadowed by
+the local value. This is silent: the app keeps working because Laravel loads `.env`
+immutably and platform variables win, right up until one is missing from the dashboard and
+the app quietly reads your laptop's config in production.
+
 ```
 # .vercelignore
+.env
+.env.*
+!.env.example
+
 public/index.php
 public/hot
 public/storage
@@ -167,9 +178,31 @@ export default defineConfig({
 
 Verify locally by simulating the environment: `VERCEL=1 npm run build`.
 
+Regenerate with `--with-form` if the app uses the `.form()` helpers
+(`Controller.update.form(...)`, which is the Inertia `<Form>` idiom). Without the flag
+those variants are missing and `vue-tsc` reports type errors that look unrelated.
+
 Committing generated code has a knock-on effect: add those three paths to
 `.prettierignore` as well, or `format:check` will fail on ~75 files that are not yours.
 ESLint's default Laravel config already ignores them.
+
+### `package-lock.json` generated on Windows can break `npm ci` on Linux
+
+`npm install` on Windows can omit optional dependencies that only apply to Linux — the
+platform-specific Rollup and `@emnapi` binaries. The lockfile then looks fine locally and
+fails in CI and on Vercel, both of which run `npm ci` on Linux.
+
+Check before deploying:
+
+```bash
+grep -c "linux-x64-gnu" package-lock.json   # 0 means the lock is incomplete
+```
+
+If it comes back empty, regenerate the lock inside a Linux container:
+
+```bash
+docker run --rm -v "$PWD":/app -w /app node:24 npm install --package-lock-only
+```
 
 ## Step 5 — The package manifest, and why it must be built at runtime
 
@@ -232,6 +265,20 @@ backups included, no credit card, no time limit.
 
 Limits that matter: **76 max connections**, and the service powers off after prolonged
 inactivity. Prefer `SESSION_DRIVER=cookie` so sessions do not consume connections.
+
+**One MySQL service per organization on the free tier.** A second project cannot get its
+own. Share the service instead and give each app its own database — `avnadmin` can create
+them over SQL, verified:
+
+```sql
+CREATE DATABASE `my_second_app`;
+```
+
+Then point that project's `DB_DATABASE` at the new name, reusing the same host, port, user,
+password and CA certificate. Migrations only touch their own schema, so the projects stay
+isolated. Two caveats: the 76 connections are shared across every app on the service, and
+`avnadmin` is the service admin, so each app technically has rights over the others' data.
+Fine for portfolio demos, not for anything real.
 
 Aiven requires TLS. Download the CA certificate, commit it (it is a public certificate,
 not a key), and point `MYSQL_ATTR_SSL_CA` at it. Laravel's `config/database.php` already
