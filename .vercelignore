@@ -5,6 +5,12 @@ public/index.php
 public/hot
 public/storage
 
+# The package manifest is generated locally with dev dependencies, but Vercel
+# installs with --no-dev and does not run Composer scripts. Rather than ship a
+# manifest, APP_PACKAGES_CACHE / APP_SERVICES_CACHE point Laravel at /tmp so it
+# builds a correct one on the first request.
+bootstrap/cache/*.php
+
 node_modules
 tests
 docs

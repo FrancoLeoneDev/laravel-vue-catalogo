@@ -32,6 +32,10 @@ if (! is_writable(__DIR__.'/../storage/framework')) {
         $storagePath.'/framework/sessions',
         $storagePath.'/framework/views',
         $storagePath.'/logs',
+        // Laravel builds its package manifest here on the first request. The
+        // APP_PACKAGES_CACHE / APP_SERVICES_CACHE env vars point at this path,
+        // so no manifest has to be shipped with the deployment.
+        '/tmp/bootstrap-cache',
     ] as $directory) {
         if (! is_dir($directory)) {
             mkdir($directory, 0755, true);
