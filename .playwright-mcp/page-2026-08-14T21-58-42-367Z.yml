@@ -1,0 +1,104 @@
+- generic [ref=f5e3]:
+  - generic [ref=f5e6]:
+    - list [ref=f5e8]:
+      - listitem [ref=f5e9]:
+        - link "Ferretería Sur" [ref=f5e10] [cursor=pointer]:
+          - /url: /admin
+    - generic [ref=f5e17]:
+      - generic [ref=f5e18]: Gestión
+      - list [ref=f5e19]:
+        - listitem [ref=f5e20]:
+          - link "Panel" [ref=f5e21] [cursor=pointer]:
+            - /url: /admin
+        - listitem [ref=f5e28]:
+          - link "Productos" [ref=f5e29] [cursor=pointer]:
+            - /url: /admin/products
+        - listitem [ref=f5e35]:
+          - link "Categorías" [ref=f5e36] [cursor=pointer]:
+            - /url: /admin/categories
+        - listitem [ref=f5e43]:
+          - link "Movimientos" [ref=f5e44] [cursor=pointer]:
+            - /url: /admin/movements
+    - generic [ref=f5e49]:
+      - list [ref=f5e52]:
+        - listitem [ref=f5e53]:
+          - link "Ver catálogo público" [ref=f5e54] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f5e60]:
+          - link "Código en GitHub" [ref=f5e61] [cursor=pointer]:
+            - /url: https://github.com/FrancoLeoneDev/laravel-vue-catalogo
+      - list [ref=f5e68]:
+        - listitem [ref=f5e69]:
+          - button "UD Usuario Demo" [ref=f5e70]:
+            - generic [ref=f5e71]: UD
+            - generic [ref=f5e73]: Usuario Demo
+  - main [ref=f5e78]:
+    - generic [ref=f5e80]:
+      - button "Toggle sidebar" [ref=f5e81]
+      - navigation "breadcrumb" [ref=f5e83]:
+        - list [ref=f5e84]:
+          - listitem [ref=f5e85]:
+            - link "Productos" [ref=f5e86] [cursor=pointer]:
+              - /url: /admin/products
+          - listitem [ref=f5e87]
+          - listitem [ref=f5e90]:
+            - link "Nuevo producto" [disabled] [ref=f5e91]
+    - generic [ref=f5e92]:
+      - generic [ref=f5e93]:
+        - heading "Nuevo producto" [level=1] [ref=f5e94]
+        - paragraph [ref=f5e95]: Cargá los datos del producto. El slug se genera solo a partir del nombre.
+      - generic [ref=f5e99]:
+        - paragraph [ref=f5e100]: El stock arranca en 0
+        - paragraph [ref=f5e101]: El stock no se carga acá. Se calcula a partir de los movimientos de inventario que registres. Después de crear el producto vas a poder registrar la entrada inicial.
+      - generic [ref=f5e102]:
+        - generic [ref=f5e103]:
+          - generic [ref=f5e104]: Categoría
+          - combobox "Categoría" [ref=f5e105]:
+            - option "Elegí una categoría" [disabled]
+            - option "Electricidad"
+            - option "Herramientas Eléctricas" [selected]
+            - option "Herramientas Manuales"
+            - option "Jardinería"
+            - option "Pinturas y Accesorios"
+            - option "Plomería"
+        - generic [ref=f5e106]:
+          - generic [ref=f5e107]: Nombre
+          - textbox "Nombre" [ref=f5e108]:
+            - /placeholder: Amoladora angular 4½″ 900 W
+            - text: Taladro de banco 500W prueba
+        - generic [ref=f5e109]:
+          - generic [ref=f5e110]: Descripción
+          - textbox "Descripción" [ref=f5e111]:
+            - /placeholder: Detalle técnico, materiales, medidas…
+            - text: Producto de prueba creado para verificar el alta desde el panel en produccion.
+        - generic [ref=f5e112]:
+          - generic [ref=f5e113]:
+            - generic [ref=f5e114]: Precio
+            - spinbutton "Precio" [ref=f5e115]: "125000"
+            - paragraph [ref=f5e116]: En pesos, con hasta dos decimales.
+          - generic [ref=f5e117]:
+            - generic [ref=f5e118]: SKU
+            - textbox "SKU" [ref=f5e119]:
+              - /placeholder: AMO-900-45
+              - text: TEST-9001
+            - paragraph [ref=f5e120]: Se guarda en mayúsculas. Tiene que ser único.
+        - generic [ref=f5e121]:
+          - generic [ref=f5e122]: Umbral de stock bajo
+          - spinbutton "Umbral de stock bajo" [ref=f5e123]: "5"
+          - paragraph [ref=f5e124]: Cuando el stock calculado baje hasta este número, el producto se marca en alerta.
+        - generic [ref=f5e125]:
+          - generic [ref=f5e126]: Imagen
+          - button "Imagen" [ref=f5e127]
+          - paragraph [ref=f5e128]: JPG, PNG o WEBP. Hasta 2 MB.
+        - generic [ref=f5e129]:
+          - generic [ref=f5e130]:
+            - checkbox "Producto activo en el catálogo" [checked] [ref=f5e131]
+            - checkbox [checked] [ref=f5e132]
+            - generic [ref=f5e133]: Producto activo en el catálogo
+          - paragraph [ref=f5e134]: Los productos inactivos no se muestran en el catálogo público.
+        - generic [ref=f5e135]:
+          - button "Crear producto" [disabled]
+          - link "Cancelar" [ref=f5e137] [cursor=pointer]:
+            - /url: /admin/products
+  - region "Notifications alt+T":
+    - list

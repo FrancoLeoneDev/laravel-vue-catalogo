@@ -1,0 +1,128 @@
+- generic [ref=f5e3]:
+  - generic [ref=f5e6]:
+    - list [ref=f5e8]:
+      - listitem [ref=f5e9]:
+        - link "Ferretería Sur" [ref=f5e10] [cursor=pointer]:
+          - /url: /admin
+    - generic [ref=f5e17]:
+      - generic [ref=f5e18]: Gestión
+      - list [ref=f5e19]:
+        - listitem [ref=f5e20]:
+          - link "Panel" [ref=f5e21] [cursor=pointer]:
+            - /url: /admin
+        - listitem [ref=f5e28]:
+          - link "Productos" [ref=f5e29] [cursor=pointer]:
+            - /url: /admin/products
+        - listitem [ref=f5e35]:
+          - link "Categorías" [ref=f5e36] [cursor=pointer]:
+            - /url: /admin/categories
+        - listitem [ref=f5e43]:
+          - link "Movimientos" [ref=f5e44] [cursor=pointer]:
+            - /url: /admin/movements
+    - generic [ref=f5e49]:
+      - list [ref=f5e52]:
+        - listitem [ref=f5e53]:
+          - link "Ver catálogo público" [ref=f5e54] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f5e60]:
+          - link "Código en GitHub" [ref=f5e61] [cursor=pointer]:
+            - /url: https://github.com/FrancoLeoneDev/laravel-vue-catalogo
+      - list [ref=f5e68]:
+        - listitem [ref=f5e69]:
+          - button "UD Usuario Demo" [ref=f5e70]:
+            - generic [ref=f5e71]: UD
+            - generic [ref=f5e73]: Usuario Demo
+  - main [ref=f5e78]:
+    - generic [ref=f5e80]:
+      - button "Toggle sidebar" [ref=f5e81]
+      - navigation "breadcrumb" [ref=f5e83]:
+        - list [ref=f5e84]:
+          - listitem [ref=f5e85]:
+            - link "Productos" [disabled] [ref=f5e138]
+    - generic [ref=f5e139]:
+      - generic [ref=f5e140]:
+        - generic [ref=f5e141]:
+          - heading "Taladro de banco 500W prueba" [level=1] [ref=f5e142]
+          - paragraph [ref=f5e143]: TEST-9001 · Herramientas Eléctricas
+        - link "Volver a productos" [ref=f5e144] [cursor=pointer]:
+          - /url: /admin/products
+      - generic [ref=f5e145]:
+        - generic [ref=f5e146]:
+          - heading "Datos del producto" [level=2] [ref=f5e147]
+          - generic [ref=f5e148]:
+            - generic [ref=f5e149]:
+              - generic [ref=f5e150]: Categoría
+              - combobox "Categoría" [ref=f5e151]:
+                - option "Electricidad"
+                - option "Herramientas Eléctricas" [selected]
+                - option "Herramientas Manuales"
+                - option "Jardinería"
+                - option "Pinturas y Accesorios"
+                - option "Plomería"
+            - generic [ref=f5e152]:
+              - generic [ref=f5e153]: Nombre
+              - textbox "Nombre" [ref=f5e154]: Taladro de banco 500W prueba
+            - generic [ref=f5e155]:
+              - generic [ref=f5e156]: Descripción
+              - textbox "Descripción" [ref=f5e157]: Producto de prueba creado para verificar el alta desde el panel en produccion.
+            - generic [ref=f5e158]:
+              - generic [ref=f5e159]:
+                - generic [ref=f5e160]: Precio
+                - spinbutton "Precio" [ref=f5e161]: "125000.00"
+              - generic [ref=f5e162]:
+                - generic [ref=f5e163]: SKU
+                - textbox "SKU" [ref=f5e164]: TEST-9001
+            - generic [ref=f5e165]:
+              - generic [ref=f5e166]: Umbral de stock bajo
+              - spinbutton "Umbral de stock bajo" [ref=f5e167]: "5"
+              - paragraph [ref=f5e168]: Es el umbral de alerta, no el stock. El stock sale de los movimientos.
+            - generic [ref=f5e169]:
+              - generic [ref=f5e170]: Imagen
+              - generic [ref=f5e171]: Este producto todavía no tiene imagen.
+              - button "Imagen" [ref=f5e179]
+              - paragraph [ref=f5e180]: JPG, PNG o WEBP. Hasta 2 MB. Si subís una nueva, reemplaza a la anterior.
+            - generic [ref=f5e182]:
+              - checkbox "Producto activo en el catálogo" [checked] [ref=f5e183]
+              - checkbox [checked] [ref=f5e184]
+              - generic [ref=f5e185]: Producto activo en el catálogo
+            - generic [ref=f5e186]:
+              - button "Guardar cambios" [ref=f5e187]
+              - link "Descartar" [ref=f5e188] [cursor=pointer]:
+                - /url: /admin/products/taladro-de-banco-500w-prueba/edit
+        - generic [ref=f5e189]:
+          - generic [ref=f5e190]:
+            - heading "Stock actual" [level=2] [ref=f5e191]
+            - paragraph [ref=f5e192]: 12 u.
+            - generic [ref=f5e193]:
+              - generic [ref=f5e194]: En stock
+              - generic [ref=f5e196]: umbral 5
+            - paragraph [ref=f5e197]: Es la suma de las entradas menos las salidas. No se edita a mano.
+          - generic [ref=f5e198]:
+            - heading "Registrar movimiento" [level=2] [ref=f5e199]
+            - generic [ref=f5e200]:
+              - generic [ref=f5e201]:
+                - generic [ref=f5e202]: Tipo
+                - combobox "Tipo" [ref=f5e203]:
+                  - option "Entrada" [selected]
+                  - option "Salida"
+              - generic [ref=f5e204]:
+                - generic [ref=f5e205]: Cantidad
+                - spinbutton "Cantidad" [ref=f5e206]: "1"
+              - generic [ref=f5e207]:
+                - generic [ref=f5e208]: Motivo
+                - textbox "Motivo" [ref=f5e209]:
+                  - /placeholder: Compra a proveedor, venta, ajuste…
+              - generic [ref=f5e210]:
+                - generic [ref=f5e211]: Fecha
+                - textbox "Fecha" [ref=f5e212]: 2026-08-14T18:58
+              - button "Registrar movimiento" [ref=f5e213]
+          - generic [ref=f5e214]:
+            - heading "Últimos movimientos" [level=2] [ref=f5e215]
+            - list [ref=f5e217]:
+              - listitem [ref=f5e218]:
+                - generic [ref=f5e219]:
+                  - paragraph [ref=f5e220]: Compra inicial a proveedor
+                  - paragraph [ref=f5e221]: 14/08/2026, 03:58 p. m.
+                - paragraph [ref=f5e222]: "+12"
+  - region "Notifications alt+T":
+    - list

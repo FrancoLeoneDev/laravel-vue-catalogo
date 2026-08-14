@@ -1,3 +1,10 @@
+# Once a .vercelignore exists, Vercel stops applying .gitignore, so local-only
+# files are uploaded unless listed here. A local .env would ship its secrets
+# with the bundle and shadow any platform variable the dashboard does not set.
+.env
+.env.*
+!.env.example
+
 # The Vercel front controller is api/index.php. Keeping public/index.php out of
 # the deployment stops it from being served as a static file from the output
 # directory, which would leak the file's source.
