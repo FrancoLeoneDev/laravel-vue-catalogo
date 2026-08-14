@@ -7,7 +7,7 @@ La decisión de diseño central es que **el stock no se guarda en el producto**:
 sumando los movimientos de inventario. Cada cambio de stock queda asentado como un
 registro auditable con su motivo y su fecha. Más abajo está el porqué.
 
-**Demo:** _(pendiente de deploy)_
+**Demo:** **https://laravel-vue-catalogo.vercel.app**
 **Credenciales:** `demo@demo.com` / `password` — están visibles en la pantalla de login y
 el formulario viene precargado, así que se entra al panel de un clic.
 
@@ -23,6 +23,8 @@ el formulario viene precargado, así que se entra al panel de un clic.
 | Base de datos | MySQL 8.4 |
 | Tipado de rutas | Laravel Wayfinder (helpers de ruta tipados en TS) |
 | Auth | Laravel Fortify (starter kit oficial de Vue) |
+| Tests | Pest 4 (73 tests, 314 assertions) |
+| Deploy | Vercel (runtime `vercel-php`) + MySQL gestionado en Aiven |
 
 El proyecto parte del **starter kit oficial de Vue** de Laravel, que ya trae
 autenticación, Inertia, Tailwind y shadcn-vue configurados.
@@ -242,11 +244,63 @@ El seeder carga 6 categorías, 40 productos y ~370 movimientos de stock distribu
 
 ```bash
 php artisan migrate:fresh --seed   # resetea la base con datos nuevos
+php artisan test                   # Pest
 composer lint                      # Laravel Pint
 composer types:check               # PHPStan (larastan)
 npm run types:check                # vue-tsc
 docker compose down -v             # borra el contenedor y su volumen
 ```
+
+---
+
+## Tests
+
+```bash
+php artisan test
+```
+
+73 tests con Pest. Los dos archivos que importan:
+
+- **`tests/Feature/StockCalculationTest.php`** — protege la decisión central del proyecto:
+  que el stock sea la suma de los movimientos. Verifica que entradas suman y salidas
+  restan, que un producto sin movimientos da 0, que registrar un movimiento **no ejecuta
+  ningún `UPDATE` sobre `products`**, que el listado no dispara N+1 (3 y 30 productos se
+  resuelven ambos en 2 queries) y que una salida mayor al stock disponible es rechazada.
+- **`tests/Feature/ProductCrudTest.php`** — el ABM completo, la validación de los Form
+  Requests, que el formulario de producto no pueda setear stock, y el filtrado
+  server-side del catálogo público.
+
+El CI corre en GitHub Actions: Pint, PHPStan, ESLint, Prettier, `vue-tsc` y la suite
+completa, contra SQLite en memoria.
+
+---
+
+## Deploy
+
+La app corre en **Vercel** con el runtime community `vercel-php`, y la base es un
+**MySQL gestionado en Aiven**. Ambas piezas están en su free tier.
+
+Correr Laravel en Vercel tiene cuatro particularidades resueltas en este repo:
+
+- **`api/index.php`** es el front controller. El filesystem de Vercel es read-only salvo
+  `/tmp`, así que reubica ahí los paths de escritura de Laravel. La detección se hace
+  probando si `storage/framework` es escribible, no leyendo una variable de entorno.
+- **`APP_PACKAGES_CACHE` y `APP_SERVICES_CACHE`** apuntan a `/tmp`. Vercel instala con
+  `--no-dev` pero no corre los scripts de Composer, así que el manifiesto de package
+  discovery se construye en el primer request en lugar de viajar con el deploy.
+- **`trustProxies`** en `bootstrap/app.php`. Vercel termina TLS y habla HTTP con la
+  función; sin confiar en `X-Forwarded-Proto`, Laravel genera URLs `http://` en una
+  página `https://` y el browser bloquea todos los assets como mixed content.
+- **`public/index.php` queda fuera del upload** (`.vercelignore`). Con
+  `outputDirectory: public`, cualquier archivo de esa carpeta se sirve como estático — y
+  eso expondría el código fuente en texto plano.
+
+**Limitación conocida:** las imágenes que se suban desde el panel no persisten entre
+deploys, porque el filesystem es efímero. El catálogo sembrado no usa imágenes. Para
+producción real habría que apuntar el disco a S3 o Vercel Blob.
+
+El procedimiento completo, aplicable a cualquier Laravel + Inertia, está en
+[`docs/deploy-vercel.md`](docs/deploy-vercel.md).
 
 ### Configuración de MySQL
 
