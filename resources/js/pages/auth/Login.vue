@@ -74,7 +74,11 @@ const demo = {
         </p>
     </div>
 
-    <PasskeyVerify />
+    <PasskeyVerify
+        label="Ingresar con passkey"
+        loading-label="Autenticando…"
+        separator="O continuá con tu correo"
+    />
 
     <Form
         v-bind="store.form()"

@@ -1,0 +1,99 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - link "Ferretería Sur Catálogo" [ref=f1e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f1e12]:
+          - generic [ref=f1e13]: Ferretería Sur
+          - generic [ref=f1e14]: Catálogo
+      - generic [ref=f1e15]:
+        - generic [ref=f1e16]:
+          - button "Light" [ref=f1e17]
+          - button "Dark" [ref=f1e25]
+          - button "System" [ref=f1e29]
+        - link "Ingresar al panel" [ref=f1e33] [cursor=pointer]:
+          - /url: /login
+  - main [ref=f1e34]:
+    - generic [ref=f1e35]:
+      - navigation "Migas de pan" [ref=f1e36]:
+        - list [ref=f1e37]:
+          - listitem [ref=f1e38]:
+            - link "Catálogo" [ref=f1e39] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f1e40]: /
+          - listitem [ref=f1e41]:
+            - link "Herramientas Eléctricas" [ref=f1e42] [cursor=pointer]:
+              - /url: /?category=herramientas-electricas
+          - listitem [ref=f1e43]: /
+          - listitem [ref=f1e44]: Taladro percutor 13mm 750W
+      - generic [ref=f1e45]:
+        - generic [ref=f1e46]: Sin imagen
+        - generic [ref=f1e53]:
+          - paragraph [ref=f1e54]: Herramientas Eléctricas
+          - heading "Taladro percutor 13mm 750W" [level=1] [ref=f1e55]
+          - paragraph [ref=f1e56]: $ 89.900,00
+          - generic [ref=f1e57]: 2 u.
+          - paragraph [ref=f1e60]: Taladro percutor de 750W con mandril de 13mm, velocidad variable, reversa y empuñadura lateral regulable.
+          - generic [ref=f1e61]:
+            - generic [ref=f1e62]:
+              - term [ref=f1e63]: SKU
+              - definition [ref=f1e64]: HE-2001
+            - generic [ref=f1e65]:
+              - term [ref=f1e66]: Rubro
+              - definition [ref=f1e67]: Herramientas Eléctricas
+          - paragraph [ref=f1e68]: El stock mostrado se calcula sumando los movimientos de inventario registrados para este producto.
+      - generic [ref=f1e69]:
+        - heading "Otros productos del rubro" [level=2] [ref=f1e70]
+        - generic [ref=f1e71]:
+          - article [ref=f1e72]:
+            - generic [ref=f1e75]:
+              - generic [ref=f1e76]:
+                - generic [ref=f1e77]: Herramientas Eléctricas
+                - generic [ref=f1e78]: HE-2002
+              - heading [level=3] [ref=f1e79]:
+                - link "Amoladora angular 4.5\" 900W" [ref=f1e80] [cursor=pointer]:
+                  - /url: /productos/amoladora-angular-45-900w
+              - paragraph [ref=f1e81]: Amoladora de 115mm y 900W con arranque suave, protector regulable sin herramientas y bloqueo de eje.
+              - generic [ref=f1e82]:
+                - paragraph [ref=f1e83]: $ 76.500,00
+                - paragraph [ref=f1e84]: 146 u. disponibles
+          - article [ref=f1e85]:
+            - generic [ref=f1e87]:
+              - generic [ref=f1e88]:
+                - generic [ref=f1e89]: Herramientas Eléctricas
+                - generic [ref=f1e90]: HE-2007
+              - heading [level=3] [ref=f1e91]:
+                - link "Soldadora inverter 200A" [ref=f1e92] [cursor=pointer]:
+                  - /url: /productos/soldadora-inverter-200a
+              - paragraph [ref=f1e93]: Soldadora inverter de 200 amperes con display digital, protección térmica y accesorios de soldadura incluidos.
+              - generic [ref=f1e94]:
+                - paragraph [ref=f1e95]: $ 198.000,00
+                - paragraph [ref=f1e96]: Sin stock
+          - article [ref=f1e97]:
+            - generic [ref=f1e100]:
+              - generic [ref=f1e101]:
+                - generic [ref=f1e102]: Herramientas Eléctricas
+                - generic [ref=f1e103]: HE-2004
+              - heading [level=3] [ref=f1e104]:
+                - link "Sierra caladora 650W velocidad variable" [ref=f1e105] [cursor=pointer]:
+                  - /url: /productos/sierra-caladora-650w-velocidad-variable
+              - paragraph [ref=f1e106]: Caladora de 650W con corte pendular en 3 posiciones, base inclinable a 45° y cambio rápido de hoja.
+              - generic [ref=f1e107]:
+                - paragraph [ref=f1e108]: $ 84.300,00
+                - paragraph [ref=f1e109]: Últimas 2 u.
+          - article [ref=f1e110]:
+            - generic [ref=f1e113]:
+              - generic [ref=f1e114]:
+                - generic [ref=f1e115]: Herramientas Eléctricas
+                - generic [ref=f1e116]: HE-2006
+              - heading [level=3] [ref=f1e117]:
+                - link "Rotomartillo SDS-Plus 800W" [ref=f1e118] [cursor=pointer]:
+                  - /url: /productos/rotomartillo-sds-plus-800w
+              - paragraph [ref=f1e119]: "Rotomartillo SDS-Plus de 800W con tres funciones: perforar, percutir y cincelar. Incluye maletín."
+              - generic [ref=f1e120]:
+                - paragraph [ref=f1e121]: $ 156.000,00
+                - paragraph [ref=f1e122]: 64 u. disponibles
+  - contentinfo [ref=f1e123]:
+    - generic [ref=f1e124]:
+      - paragraph [ref=f1e125]: © 2026 Ferretería Sur — catálogo de demostración.
+      - paragraph [ref=f1e126]: Laravel · Inertia · Vue 3 · MySQL · Tailwind

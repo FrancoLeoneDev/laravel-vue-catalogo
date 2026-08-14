@@ -128,6 +128,18 @@ class CatalogSeeder extends Seeder
             }
         }
 
+        // Slide the whole series forward so the ledger reaches the present day
+        // and the dashboard's 30-day window is never empty. Order and
+        // quantities are untouched, so the derived balance is unchanged.
+        $last = end($movements)['occurred_at'];
+        $gap = $last->diffInDays(Carbon::now()) - random_int(0, 6);
+
+        if ($gap > 0) {
+            foreach ($movements as $key => $movement) {
+                $movements[$key]['occurred_at'] = $movement['occurred_at']->copy()->addDays($gap);
+            }
+        }
+
         StockMovement::query()->insert(array_map(fn (array $movement): array => [
             'product_id' => $product->id,
             'user_id' => $userId,

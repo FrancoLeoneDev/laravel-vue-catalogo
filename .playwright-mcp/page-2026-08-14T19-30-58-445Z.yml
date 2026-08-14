@@ -1,0 +1,179 @@
+- generic [ref=f2e55]:
+  - generic [ref=f2e58]:
+    - list [ref=f2e60]:
+      - listitem [ref=f2e61]:
+        - link "Ferretería Sur" [ref=f2e62] [cursor=pointer]:
+          - /url: /admin
+    - generic [ref=f2e69]:
+      - generic [ref=f2e70]: Platform
+      - list [ref=f2e71]:
+        - listitem [ref=f2e72]:
+          - link "Panel" [ref=f2e73] [cursor=pointer]:
+            - /url: /admin
+        - listitem [ref=f2e80]:
+          - link "Productos" [ref=f2e81] [cursor=pointer]:
+            - /url: /admin/products
+        - listitem [ref=f2e87]:
+          - link "Categorías" [ref=f2e88] [cursor=pointer]:
+            - /url: /admin/categories
+        - listitem [ref=f2e95]:
+          - link "Movimientos" [ref=f2e96] [cursor=pointer]:
+            - /url: /admin/movements
+    - generic [ref=f2e101]:
+      - list [ref=f2e104]:
+        - listitem [ref=f2e105]:
+          - link "Ver catálogo público" [ref=f2e106] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f2e112]:
+          - link "Código en GitHub" [ref=f2e113] [cursor=pointer]:
+            - /url: https://github.com/FrancoLeoneDev/laravel-vue-catalogo
+      - list [ref=f2e120]:
+        - listitem [ref=f2e121]:
+          - button "UD Usuario Demo" [ref=f2e122]:
+            - generic [ref=f2e123]: UD
+            - generic [ref=f2e125]: Usuario Demo
+  - main [ref=f2e130]:
+    - generic [ref=f2e132]:
+      - button "Toggle sidebar" [ref=f2e133]
+      - navigation "breadcrumb" [ref=f2e135]:
+        - list [ref=f2e136]:
+          - listitem [ref=f2e137]:
+            - link "Panel" [disabled] [ref=f2e138]
+    - generic [ref=f2e139]:
+      - generic [ref=f2e140]:
+        - heading "Panel" [level=1] [ref=f2e141]
+        - paragraph [ref=f2e142]: El stock de cada producto se calcula sumando sus movimientos de inventario. No se edita a mano.
+      - generic [ref=f2e143]:
+        - generic [ref=f2e144]:
+          - term [ref=f2e145]: Productos
+          - definition [ref=f2e146]: "40"
+          - paragraph [ref=f2e147]: 38 activos
+        - generic [ref=f2e148]:
+          - term [ref=f2e149]: Categorías
+          - definition [ref=f2e150]: "6"
+          - paragraph [ref=f2e151]: rubros del catálogo
+        - generic [ref=f2e152]:
+          - term [ref=f2e153]: Unidades en stock
+          - definition [ref=f2e154]: "1.864"
+          - paragraph [ref=f2e155]: suma de todos los movimientos
+        - generic [ref=f2e156]:
+          - term [ref=f2e157]: Movimientos (30 días)
+          - definition [ref=f2e158]: "0"
+          - paragraph [ref=f2e159]: entradas y salidas registradas
+      - generic [ref=f2e160]:
+        - generic [ref=f2e161]:
+          - generic [ref=f2e162]:
+            - generic [ref=f2e163]:
+              - heading "Stock bajo" [level=2] [ref=f2e164]
+              - paragraph [ref=f2e165]: 16 productos en o por debajo de su umbral
+            - link "Ver todos" [ref=f2e166] [cursor=pointer]:
+              - /url: /admin/products
+          - list [ref=f2e167]:
+            - listitem [ref=f2e168]:
+              - generic [ref=f2e169]:
+                - link "Bordeadora eléctrica 1000W" [ref=f2e170] [cursor=pointer]:
+                  - /url: /admin/products/bordeadora-electrica-1000w/edit
+                - paragraph [ref=f2e171]: JD-6004 · umbral 4
+              - generic [ref=f2e172]: 1 u.
+            - listitem [ref=f2e174]:
+              - generic [ref=f2e175]:
+                - link "Cable unipolar 2.5mm x 100m" [ref=f2e176] [cursor=pointer]:
+                  - /url: /admin/products/cable-unipolar-25mm-x-100m/edit
+                - paragraph [ref=f2e177]: EL-3001 · umbral 6
+              - generic [ref=f2e178]: 6 u.
+            - listitem [ref=f2e180]:
+              - generic [ref=f2e181]:
+                - link "Caño PPR fusión 20mm x 4m" [ref=f2e182] [cursor=pointer]:
+                  - /url: /admin/products/cano-ppr-fusion-20mm-x-4m/edit
+                - paragraph [ref=f2e183]: PL-4001 · umbral 12
+              - generic [ref=f2e184]: 9 u.
+            - listitem [ref=f2e186]:
+              - generic [ref=f2e187]:
+                - link "Cinta métrica 5m carcasa reforzada" [ref=f2e188] [cursor=pointer]:
+                  - /url: /admin/products/cinta-metrica-5m-carcasa-reforzada/edit
+                - paragraph [ref=f2e189]: HM-1007 · umbral 15
+              - generic [ref=f2e190]: 3 u.
+            - listitem [ref=f2e192]:
+              - generic [ref=f2e193]:
+                - link "Cinta teflón 12mm x 10m" [ref=f2e194] [cursor=pointer]:
+                  - /url: /admin/products/cinta-teflon-12mm-x-10m/edit
+                - paragraph [ref=f2e195]: PL-4007 · umbral 50
+              - generic [ref=f2e196]: 3 u.
+            - listitem [ref=f2e198]:
+              - generic [ref=f2e199]:
+                - link "Codo PVC 110mm 90 grados" [ref=f2e200] [cursor=pointer]:
+                  - /url: /admin/products/codo-pvc-110mm-90-grados/edit
+                - paragraph [ref=f2e201]: PL-4004 · umbral 20
+              - generic [ref=f2e202]: 2 u.
+            - listitem [ref=f2e204]:
+              - generic [ref=f2e205]:
+                - link "Látex interior mate blanco 20L" [ref=f2e206] [cursor=pointer]:
+                  - /url: /admin/products/latex-interior-mate-blanco-20l/edit
+                - paragraph [ref=f2e207]: PI-5001 · umbral 6
+              - generic [ref=f2e208]: 5 u.
+            - listitem [ref=f2e210]:
+              - generic [ref=f2e211]:
+                - link "Manguera reforzada 1/2\" x 20m" [ref=f2e212] [cursor=pointer]:
+                  - /url: /admin/products/manguera-reforzada-12-x-20m/edit
+                - paragraph [ref=f2e213]: JD-6001 · umbral 10
+              - generic [ref=f2e214]: 1 u.
+        - generic [ref=f2e216]:
+          - generic [ref=f2e217]:
+            - generic [ref=f2e218]:
+              - heading "Últimos movimientos" [level=2] [ref=f2e219]
+              - paragraph [ref=f2e220]: Registro auditable de cada cambio de inventario
+            - link "Ver todos" [ref=f2e221] [cursor=pointer]:
+              - /url: /admin/movements
+          - list [ref=f2e222]:
+            - listitem [ref=f2e223]:
+              - generic [ref=f2e224]:
+                - paragraph [ref=f2e225]: Esmalte sintético brillante 1L
+                - paragraph [ref=f2e226]: Venta mayorista · 05/07/2026, 04:05 p. m.
+              - generic [ref=f2e227]: −8
+            - listitem [ref=f2e228]:
+              - generic [ref=f2e229]:
+                - paragraph [ref=f2e230]: Cinta de papel para pintor 24mm x 40m
+                - paragraph [ref=f2e231]: Venta mayorista · 01/07/2026, 04:05 p. m.
+              - generic [ref=f2e232]: −5
+            - listitem [ref=f2e233]:
+              - generic [ref=f2e234]:
+                - paragraph [ref=f2e235]: Cinta de papel para pintor 24mm x 40m
+                - paragraph [ref=f2e236]: Venta en mostrador · 27/06/2026, 04:05 p. m.
+              - generic [ref=f2e237]: −8
+            - listitem [ref=f2e238]:
+              - generic [ref=f2e239]:
+                - paragraph [ref=f2e240]: Esmalte sintético brillante 1L
+                - paragraph [ref=f2e241]: Ajuste por inventario físico · 22/06/2026, 04:05 p. m.
+              - generic [ref=f2e242]: −8
+            - listitem [ref=f2e243]:
+              - generic [ref=f2e244]:
+                - paragraph [ref=f2e245]: Juego de destornilladores 6 piezas
+                - paragraph [ref=f2e246]: Venta mayorista · 19/06/2026, 04:05 p. m.
+              - generic [ref=f2e247]: −6
+            - listitem [ref=f2e248]:
+              - generic [ref=f2e249]:
+                - paragraph [ref=f2e250]: Sierra caladora 650W velocidad variable
+                - paragraph [ref=f2e251]: Rotura en depósito · 18/06/2026, 04:05 p. m.
+              - generic [ref=f2e252]: −1
+            - listitem [ref=f2e253]:
+              - generic [ref=f2e254]:
+                - paragraph [ref=f2e255]: Esmalte sintético brillante 1L
+                - paragraph [ref=f2e256]: Ajuste por inventario físico · 16/06/2026, 04:05 p. m.
+              - generic [ref=f2e257]: −7
+            - listitem [ref=f2e258]:
+              - generic [ref=f2e259]:
+                - paragraph [ref=f2e260]: Manguera reforzada 1/2" x 20m
+                - paragraph [ref=f2e261]: Venta en mostrador · 14/06/2026, 04:05 p. m.
+              - generic [ref=f2e262]: −2
+            - listitem [ref=f2e263]:
+              - generic [ref=f2e264]:
+                - paragraph [ref=f2e265]: Llave ajustable 10" cromo vanadio
+                - paragraph [ref=f2e266]: Pedido online · 13/06/2026, 04:05 p. m.
+              - generic [ref=f2e267]: −3
+            - listitem [ref=f2e268]:
+              - generic [ref=f2e269]:
+                - paragraph [ref=f2e270]: Cinta de papel para pintor 24mm x 40m
+                - paragraph [ref=f2e271]: Rotura en depósito · 12/06/2026, 04:05 p. m.
+              - generic [ref=f2e272]: −8
+  - region "Notifications alt+T":
+    - list

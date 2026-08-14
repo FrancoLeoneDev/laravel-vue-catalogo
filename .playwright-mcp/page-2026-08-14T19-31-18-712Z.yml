@@ -1,0 +1,485 @@
+- generic [ref=f3e3]:
+  - generic [ref=f3e6]:
+    - list [ref=f3e8]:
+      - listitem [ref=f3e9]:
+        - link "Ferretería Sur" [ref=f3e10] [cursor=pointer]:
+          - /url: /admin
+    - generic [ref=f3e17]:
+      - generic [ref=f3e18]: Platform
+      - list [ref=f3e19]:
+        - listitem [ref=f3e20]:
+          - link "Panel" [ref=f3e21] [cursor=pointer]:
+            - /url: /admin
+        - listitem [ref=f3e28]:
+          - link "Productos" [ref=f3e29] [cursor=pointer]:
+            - /url: /admin/products
+        - listitem [ref=f3e35]:
+          - link "Categorías" [ref=f3e36] [cursor=pointer]:
+            - /url: /admin/categories
+        - listitem [ref=f3e43]:
+          - link "Movimientos" [ref=f3e44] [cursor=pointer]:
+            - /url: /admin/movements
+    - generic [ref=f3e49]:
+      - list [ref=f3e52]:
+        - listitem [ref=f3e53]:
+          - link "Ver catálogo público" [ref=f3e54] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f3e60]:
+          - link "Código en GitHub" [ref=f3e61] [cursor=pointer]:
+            - /url: https://github.com/FrancoLeoneDev/laravel-vue-catalogo
+      - list [ref=f3e68]:
+        - listitem [ref=f3e69]:
+          - button "UD Usuario Demo" [ref=f3e70]:
+            - generic [ref=f3e71]: UD
+            - generic [ref=f3e73]: Usuario Demo
+  - main [ref=f3e78]:
+    - generic [ref=f3e80]:
+      - button "Toggle sidebar" [ref=f3e81]
+      - navigation "breadcrumb" [ref=f3e83]:
+        - list [ref=f3e84]:
+          - listitem [ref=f3e85]:
+            - link "Movimientos de stock" [disabled] [ref=f3e86]
+    - generic [ref=f3e87]:
+      - generic [ref=f3e88]:
+        - heading "Movimientos de stock" [level=1] [ref=f3e89]
+        - paragraph [ref=f3e90]: "El stock de cada producto es la suma de estos registros: no se edita a mano ni se corrige, se agrega un movimiento nuevo."
+      - generic [ref=f3e91]:
+        - generic [ref=f3e92]:
+          - heading "Registrar movimiento" [level=2] [ref=f3e93]
+          - paragraph [ref=f3e94]: Una entrada suma unidades, una salida las resta. El motivo queda asentado en el registro.
+        - generic [ref=f3e96]:
+          - generic [ref=f3e97]:
+            - generic [ref=f3e98]: Producto
+            - combobox "Producto" [ref=f3e99]:
+              - option "Elegí un producto" [disabled] [selected]
+              - option "Amoladora angular 4.5\" 900W · HE-2002"
+              - option "Arco de sierra 12\" con hoja bimetálica · HM-1006"
+              - option "Atornillador inalámbrico 12V con 2 baterías · HE-2003"
+              - option "Bordeadora eléctrica 1000W · JD-6004"
+              - option "Cable unipolar 2.5mm x 100m · EL-3001"
+              - option "Caño PPR fusión 20mm x 4m · PL-4001"
+              - option "Carretilla 90 litros rueda neumática · JD-6005"
+              - option "Cinta de papel para pintor 24mm x 40m · PI-5006"
+              - option "Cinta métrica 5m carcasa reforzada · HM-1007"
+              - option "Cinta teflón 12mm x 10m · PL-4007"
+              - option "Codo PVC 110mm 90 grados · PL-4004"
+              - option "Disyuntor diferencial 2x40A 30mA · EL-3003"
+              - option "Enduido plástico interior 10kg · PI-5005"
+              - option "Esmalte sintético brillante 1L · PI-5002"
+              - option "Flexible acero inoxidable 1/2\" 40cm · PL-4003"
+              - option "Grifería monocomando cocina mesada · PL-4002"
+              - option "Juego de destornilladores 6 piezas · HM-1002"
+              - option "Lámpara LED 12W luz fría E27 · EL-3006"
+              - option "Látex interior mate blanco 20L · PI-5001"
+              - option "Lijadora orbital 300W disco 125mm · HE-2005"
+              - option "Llave ajustable 10\" cromo vanadio · HM-1003"
+              - option "Llave térmica bipolar 25A · EL-3002"
+              - option "Manguera reforzada 1/2\" x 20m · JD-6001"
+              - option "Martillo carpintero 27mm mango madera · HM-1001"
+              - option "Pala de punta con cabo de madera · JD-6003"
+              - option "Pincel cerda natural 2\" · PI-5004"
+              - option "Pinza universal 8\" aislada 1000V · HM-1004"
+              - option "Regadera plástica 10 litros · JD-6006"
+              - option "Rejilla de piso acero inoxidable 15x15 · PL-4006"
+              - option "Rodillo lana 22cm con mango · PI-5003"
+              - option "Rollo cinta aisladora 20m x 19mm · EL-3007"
+              - option "Rotomartillo SDS-Plus 800W · HE-2006"
+              - option "Set de llaves Allen métricas 9 piezas · HM-1005"
+              - option "Sierra caladora 650W velocidad variable · HE-2004"
+              - option "Soldadora inverter 200A · HE-2007"
+              - option "Tablero embutir 12 módulos · EL-3004"
+              - option "Taladro percutor 13mm 750W · HE-2001"
+              - option "Tijera de podar bypass 8\" · JD-6002"
+              - option "Toma exterior IP54 con tapa · EL-3005"
+              - option "Válvula esférica bronce 1/2\" · PL-4005"
+          - generic [ref=f3e100]:
+            - generic [ref=f3e101]: Tipo
+            - combobox "Tipo" [ref=f3e102]:
+              - option "Entrada" [selected]
+              - option "Salida"
+          - generic [ref=f3e103]:
+            - generic [ref=f3e104]: Cantidad
+            - spinbutton "Cantidad" [ref=f3e105]: "1"
+          - generic [ref=f3e106]:
+            - generic [ref=f3e107]: Fecha
+            - textbox "Fecha" [ref=f3e108]: 2026-08-14T16:31
+          - generic [ref=f3e109]:
+            - generic [ref=f3e110]: Motivo
+            - textbox "Motivo" [ref=f3e111]:
+              - /placeholder: Compra a proveedor, venta mostrador, ajuste de inventario…
+          - button "Registrar" [ref=f3e113]
+      - generic [ref=f3e114]:
+        - generic [ref=f3e115]:
+          - generic [ref=f3e116]:
+            - heading "Registro" [level=2] [ref=f3e117]
+            - paragraph [ref=f3e118]: 379 movimientos en el historial
+          - generic [ref=f3e119]:
+            - generic [ref=f3e120]:
+              - generic [ref=f3e121]: Filtrar por producto
+              - combobox "Filtrar por producto" [ref=f3e122]:
+                - option "Todos los productos" [selected]
+                - option "Amoladora angular 4.5\" 900W · HE-2002"
+                - option "Arco de sierra 12\" con hoja bimetálica · HM-1006"
+                - option "Atornillador inalámbrico 12V con 2 baterías · HE-2003"
+                - option "Bordeadora eléctrica 1000W · JD-6004"
+                - option "Cable unipolar 2.5mm x 100m · EL-3001"
+                - option "Caño PPR fusión 20mm x 4m · PL-4001"
+                - option "Carretilla 90 litros rueda neumática · JD-6005"
+                - option "Cinta de papel para pintor 24mm x 40m · PI-5006"
+                - option "Cinta métrica 5m carcasa reforzada · HM-1007"
+                - option "Cinta teflón 12mm x 10m · PL-4007"
+                - option "Codo PVC 110mm 90 grados · PL-4004"
+                - option "Disyuntor diferencial 2x40A 30mA · EL-3003"
+                - option "Enduido plástico interior 10kg · PI-5005"
+                - option "Esmalte sintético brillante 1L · PI-5002"
+                - option "Flexible acero inoxidable 1/2\" 40cm · PL-4003"
+                - option "Grifería monocomando cocina mesada · PL-4002"
+                - option "Juego de destornilladores 6 piezas · HM-1002"
+                - option "Lámpara LED 12W luz fría E27 · EL-3006"
+                - option "Látex interior mate blanco 20L · PI-5001"
+                - option "Lijadora orbital 300W disco 125mm · HE-2005"
+                - option "Llave ajustable 10\" cromo vanadio · HM-1003"
+                - option "Llave térmica bipolar 25A · EL-3002"
+                - option "Manguera reforzada 1/2\" x 20m · JD-6001"
+                - option "Martillo carpintero 27mm mango madera · HM-1001"
+                - option "Pala de punta con cabo de madera · JD-6003"
+                - option "Pincel cerda natural 2\" · PI-5004"
+                - option "Pinza universal 8\" aislada 1000V · HM-1004"
+                - option "Regadera plástica 10 litros · JD-6006"
+                - option "Rejilla de piso acero inoxidable 15x15 · PL-4006"
+                - option "Rodillo lana 22cm con mango · PI-5003"
+                - option "Rollo cinta aisladora 20m x 19mm · EL-3007"
+                - option "Rotomartillo SDS-Plus 800W · HE-2006"
+                - option "Set de llaves Allen métricas 9 piezas · HM-1005"
+                - option "Sierra caladora 650W velocidad variable · HE-2004"
+                - option "Soldadora inverter 200A · HE-2007"
+                - option "Tablero embutir 12 módulos · EL-3004"
+                - option "Taladro percutor 13mm 750W · HE-2001"
+                - option "Tijera de podar bypass 8\" · JD-6002"
+                - option "Toma exterior IP54 con tapa · EL-3005"
+                - option "Válvula esférica bronce 1/2\" · PL-4005"
+            - generic [ref=f3e123]:
+              - generic [ref=f3e124]: Filtrar por tipo
+              - combobox "Filtrar por tipo" [ref=f3e125]:
+                - option "Entradas y salidas" [selected]
+                - option "Entrada"
+                - option "Salida"
+        - table [ref=f3e127]:
+          - caption [ref=f3e128]: Historial de entradas y salidas de inventario
+          - rowgroup [ref=f3e129]:
+            - row [ref=f3e130]:
+              - columnheader "Fecha" [ref=f3e131]
+              - columnheader "Producto" [ref=f3e132]
+              - columnheader "Tipo" [ref=f3e133]
+              - columnheader "Cantidad" [ref=f3e134]
+              - columnheader "Motivo" [ref=f3e135]
+              - columnheader "Usuario" [ref=f3e136]
+          - rowgroup [ref=f3e137]:
+            - row [ref=f3e138]:
+              - cell "05/07/2026, 04:05 p. m." [ref=f3e139]
+              - rowheader "Esmalte sintético brillante 1L PI-5002" [ref=f3e140]:
+                - generic [ref=f3e141]: Esmalte sintético brillante 1L
+                - generic [ref=f3e142]: PI-5002
+              - cell [ref=f3e143]:
+                - generic [ref=f3e144]:
+                  - generic [ref=f3e145]: −
+                  - text: Salida
+              - cell "−8" [ref=f3e146]
+              - cell [ref=f3e147]:
+                - paragraph [ref=f3e148]: Venta mayorista
+              - cell "Usuario Demo" [ref=f3e149]
+            - row [ref=f3e150]:
+              - cell "01/07/2026, 04:05 p. m." [ref=f3e151]
+              - rowheader "Cinta de papel para pintor 24mm x 40m PI-5006" [ref=f3e152]:
+                - generic [ref=f3e153]: Cinta de papel para pintor 24mm x 40m
+                - generic [ref=f3e154]: PI-5006
+              - cell [ref=f3e155]:
+                - generic [ref=f3e156]:
+                  - generic [ref=f3e157]: −
+                  - text: Salida
+              - cell "−5" [ref=f3e158]
+              - cell [ref=f3e159]:
+                - paragraph [ref=f3e160]: Venta mayorista
+              - cell "Usuario Demo" [ref=f3e161]
+            - row [ref=f3e162]:
+              - cell "27/06/2026, 04:05 p. m." [ref=f3e163]
+              - rowheader "Cinta de papel para pintor 24mm x 40m PI-5006" [ref=f3e164]:
+                - generic [ref=f3e165]: Cinta de papel para pintor 24mm x 40m
+                - generic [ref=f3e166]: PI-5006
+              - cell [ref=f3e167]:
+                - generic [ref=f3e168]:
+                  - generic [ref=f3e169]: −
+                  - text: Salida
+              - cell "−8" [ref=f3e170]
+              - cell [ref=f3e171]:
+                - paragraph [ref=f3e172]: Venta en mostrador
+              - cell "Usuario Demo" [ref=f3e173]
+            - row [ref=f3e174]:
+              - cell "22/06/2026, 04:05 p. m." [ref=f3e175]
+              - rowheader "Esmalte sintético brillante 1L PI-5002" [ref=f3e176]:
+                - generic [ref=f3e177]: Esmalte sintético brillante 1L
+                - generic [ref=f3e178]: PI-5002
+              - cell [ref=f3e179]:
+                - generic [ref=f3e180]:
+                  - generic [ref=f3e181]: −
+                  - text: Salida
+              - cell "−8" [ref=f3e182]
+              - cell [ref=f3e183]:
+                - paragraph [ref=f3e184]: Ajuste por inventario físico
+              - cell "Usuario Demo" [ref=f3e185]
+            - row [ref=f3e186]:
+              - cell "19/06/2026, 04:05 p. m." [ref=f3e187]
+              - rowheader "Juego de destornilladores 6 piezas HM-1002" [ref=f3e188]:
+                - generic [ref=f3e189]: Juego de destornilladores 6 piezas
+                - generic [ref=f3e190]: HM-1002
+              - cell [ref=f3e191]:
+                - generic [ref=f3e192]:
+                  - generic [ref=f3e193]: −
+                  - text: Salida
+              - cell "−6" [ref=f3e194]
+              - cell [ref=f3e195]:
+                - paragraph [ref=f3e196]: Venta mayorista
+              - cell "Usuario Demo" [ref=f3e197]
+            - row [ref=f3e198]:
+              - cell "18/06/2026, 04:05 p. m." [ref=f3e199]
+              - rowheader "Sierra caladora 650W velocidad variable HE-2004" [ref=f3e200]:
+                - generic [ref=f3e201]: Sierra caladora 650W velocidad variable
+                - generic [ref=f3e202]: HE-2004
+              - cell [ref=f3e203]:
+                - generic [ref=f3e204]:
+                  - generic [ref=f3e205]: −
+                  - text: Salida
+              - cell "−1" [ref=f3e206]
+              - cell [ref=f3e207]:
+                - paragraph [ref=f3e208]: Rotura en depósito
+              - cell "Usuario Demo" [ref=f3e209]
+            - row [ref=f3e210]:
+              - cell "16/06/2026, 04:05 p. m." [ref=f3e211]
+              - rowheader "Esmalte sintético brillante 1L PI-5002" [ref=f3e212]:
+                - generic [ref=f3e213]: Esmalte sintético brillante 1L
+                - generic [ref=f3e214]: PI-5002
+              - cell [ref=f3e215]:
+                - generic [ref=f3e216]:
+                  - generic [ref=f3e217]: −
+                  - text: Salida
+              - cell "−7" [ref=f3e218]
+              - cell [ref=f3e219]:
+                - paragraph [ref=f3e220]: Ajuste por inventario físico
+              - cell "Usuario Demo" [ref=f3e221]
+            - row [ref=f3e222]:
+              - cell "14/06/2026, 04:05 p. m." [ref=f3e223]
+              - rowheader "Manguera reforzada 1/2\" x 20m JD-6001" [ref=f3e224]:
+                - generic [ref=f3e225]: Manguera reforzada 1/2" x 20m
+                - generic [ref=f3e226]: JD-6001
+              - cell [ref=f3e227]:
+                - generic [ref=f3e228]:
+                  - generic [ref=f3e229]: −
+                  - text: Salida
+              - cell "−2" [ref=f3e230]
+              - cell [ref=f3e231]:
+                - paragraph [ref=f3e232]: Venta en mostrador
+              - cell "Usuario Demo" [ref=f3e233]
+            - row [ref=f3e234]:
+              - cell "13/06/2026, 04:05 p. m." [ref=f3e235]
+              - rowheader "Llave ajustable 10\" cromo vanadio HM-1003" [ref=f3e236]:
+                - generic [ref=f3e237]: Llave ajustable 10" cromo vanadio
+                - generic [ref=f3e238]: HM-1003
+              - cell [ref=f3e239]:
+                - generic [ref=f3e240]:
+                  - generic [ref=f3e241]: −
+                  - text: Salida
+              - cell "−3" [ref=f3e242]
+              - cell [ref=f3e243]:
+                - paragraph [ref=f3e244]: Pedido online
+              - cell "Usuario Demo" [ref=f3e245]
+            - row [ref=f3e246]:
+              - cell "12/06/2026, 04:05 p. m." [ref=f3e247]
+              - rowheader "Cinta de papel para pintor 24mm x 40m PI-5006" [ref=f3e248]:
+                - generic [ref=f3e249]: Cinta de papel para pintor 24mm x 40m
+                - generic [ref=f3e250]: PI-5006
+              - cell [ref=f3e251]:
+                - generic [ref=f3e252]:
+                  - generic [ref=f3e253]: −
+                  - text: Salida
+              - cell "−8" [ref=f3e254]
+              - cell [ref=f3e255]:
+                - paragraph [ref=f3e256]: Rotura en depósito
+              - cell "Usuario Demo" [ref=f3e257]
+            - row [ref=f3e258]:
+              - cell "10/06/2026, 04:05 p. m." [ref=f3e259]
+              - rowheader "Toma exterior IP54 con tapa EL-3005" [ref=f3e260]:
+                - generic [ref=f3e261]: Toma exterior IP54 con tapa
+                - generic [ref=f3e262]: EL-3005
+              - cell [ref=f3e263]:
+                - generic [ref=f3e264]:
+                  - generic [ref=f3e265]: −
+                  - text: Salida
+              - cell "−8" [ref=f3e266]
+              - cell [ref=f3e267]:
+                - paragraph [ref=f3e268]: Pedido online
+              - cell "Usuario Demo" [ref=f3e269]
+            - row [ref=f3e270]:
+              - cell "07/06/2026, 04:05 p. m." [ref=f3e271]
+              - rowheader "Manguera reforzada 1/2\" x 20m JD-6001" [ref=f3e272]:
+                - generic [ref=f3e273]: Manguera reforzada 1/2" x 20m
+                - generic [ref=f3e274]: JD-6001
+              - cell [ref=f3e275]:
+                - generic [ref=f3e276]:
+                  - generic [ref=f3e277]: −
+                  - text: Salida
+              - cell "−5" [ref=f3e278]
+              - cell [ref=f3e279]:
+                - paragraph [ref=f3e280]: Rotura en depósito
+              - cell "Usuario Demo" [ref=f3e281]
+            - row [ref=f3e282]:
+              - cell "07/06/2026, 04:05 p. m." [ref=f3e283]
+              - rowheader "Sierra caladora 650W velocidad variable HE-2004" [ref=f3e284]:
+                - generic [ref=f3e285]: Sierra caladora 650W velocidad variable
+                - generic [ref=f3e286]: HE-2004
+              - cell [ref=f3e287]:
+                - generic [ref=f3e288]:
+                  - generic [ref=f3e289]: −
+                  - text: Salida
+              - cell "−12" [ref=f3e290]
+              - cell [ref=f3e291]:
+                - paragraph [ref=f3e292]: Venta mayorista
+              - cell "Usuario Demo" [ref=f3e293]
+            - row [ref=f3e294]:
+              - cell "06/06/2026, 04:05 p. m." [ref=f3e295]
+              - rowheader "Juego de destornilladores 6 piezas HM-1002" [ref=f3e296]:
+                - generic [ref=f3e297]: Juego de destornilladores 6 piezas
+                - generic [ref=f3e298]: HM-1002
+              - cell [ref=f3e299]:
+                - generic [ref=f3e300]:
+                  - generic [ref=f3e301]: −
+                  - text: Salida
+              - cell "−5" [ref=f3e302]
+              - cell [ref=f3e303]:
+                - paragraph [ref=f3e304]: Pedido online
+              - cell "Usuario Demo" [ref=f3e305]
+            - row [ref=f3e306]:
+              - cell "05/06/2026, 04:05 p. m." [ref=f3e307]
+              - rowheader "Cinta de papel para pintor 24mm x 40m PI-5006" [ref=f3e308]:
+                - generic [ref=f3e309]: Cinta de papel para pintor 24mm x 40m
+                - generic [ref=f3e310]: PI-5006
+              - cell [ref=f3e311]:
+                - generic [ref=f3e312]:
+                  - generic [ref=f3e313]: −
+                  - text: Salida
+              - cell "−10" [ref=f3e314]
+              - cell [ref=f3e315]:
+                - paragraph [ref=f3e316]: Pedido online
+              - cell "Usuario Demo" [ref=f3e317]
+            - row [ref=f3e318]:
+              - cell "05/06/2026, 04:05 p. m." [ref=f3e319]
+              - rowheader "Enduido plástico interior 10kg PI-5005" [ref=f3e320]:
+                - generic [ref=f3e321]: Enduido plástico interior 10kg
+                - generic [ref=f3e322]: PI-5005
+              - cell [ref=f3e323]:
+                - generic [ref=f3e324]:
+                  - generic [ref=f3e325]: −
+                  - text: Salida
+              - cell "−2" [ref=f3e326]
+              - cell [ref=f3e327]:
+                - paragraph [ref=f3e328]: Rotura en depósito
+              - cell "Usuario Demo" [ref=f3e329]
+            - row [ref=f3e330]:
+              - cell "04/06/2026, 04:05 p. m." [ref=f3e331]
+              - rowheader "Esmalte sintético brillante 1L PI-5002" [ref=f3e332]:
+                - generic [ref=f3e333]: Esmalte sintético brillante 1L
+                - generic [ref=f3e334]: PI-5002
+              - cell [ref=f3e335]:
+                - generic [ref=f3e336]:
+                  - generic [ref=f3e337]: −
+                  - text: Salida
+              - cell "−15" [ref=f3e338]
+              - cell [ref=f3e339]:
+                - paragraph [ref=f3e340]: Ajuste por inventario físico
+              - cell "Usuario Demo" [ref=f3e341]
+            - row [ref=f3e342]:
+              - cell "04/06/2026, 04:05 p. m." [ref=f3e343]
+              - rowheader "Toma exterior IP54 con tapa EL-3005" [ref=f3e344]:
+                - generic [ref=f3e345]: Toma exterior IP54 con tapa
+                - generic [ref=f3e346]: EL-3005
+              - cell [ref=f3e347]:
+                - generic [ref=f3e348]:
+                  - generic [ref=f3e349]: −
+                  - text: Salida
+              - cell "−4" [ref=f3e350]
+              - cell [ref=f3e351]:
+                - paragraph [ref=f3e352]: Ajuste por inventario físico
+              - cell "Usuario Demo" [ref=f3e353]
+            - row [ref=f3e354]:
+              - cell "04/06/2026, 04:05 p. m." [ref=f3e355]
+              - rowheader "Llave ajustable 10\" cromo vanadio HM-1003" [ref=f3e356]:
+                - generic [ref=f3e357]: Llave ajustable 10" cromo vanadio
+                - generic [ref=f3e358]: HM-1003
+              - cell [ref=f3e359]:
+                - generic [ref=f3e360]:
+                  - generic [ref=f3e361]: −
+                  - text: Salida
+              - cell "−16" [ref=f3e362]
+              - cell [ref=f3e363]:
+                - paragraph [ref=f3e364]: Venta mayorista
+              - cell "Usuario Demo" [ref=f3e365]
+            - row [ref=f3e366]:
+              - cell "31/05/2026, 04:05 p. m." [ref=f3e367]
+              - rowheader "Llave ajustable 10\" cromo vanadio HM-1003" [ref=f3e368]:
+                - generic [ref=f3e369]: Llave ajustable 10" cromo vanadio
+                - generic [ref=f3e370]: HM-1003
+              - cell [ref=f3e371]:
+                - generic [ref=f3e372]:
+                  - generic [ref=f3e373]: −
+                  - text: Salida
+              - cell "−4" [ref=f3e374]
+              - cell [ref=f3e375]:
+                - paragraph [ref=f3e376]: Pedido online
+              - cell "Usuario Demo" [ref=f3e377]
+        - navigation "Paginación" [ref=f3e379]:
+          - paragraph [ref=f3e380]: Mostrando 1–20 de 379
+          - list [ref=f3e381]:
+            - listitem [ref=f3e382]:
+              - generic [ref=f3e383]: Anterior
+            - listitem [ref=f3e384]:
+              - link "1" [ref=f3e385] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/admin/movements?page=1
+            - listitem [ref=f3e386]:
+              - link "2" [ref=f3e387] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/admin/movements?page=2
+            - listitem [ref=f3e388]:
+              - link "3" [ref=f3e389] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/admin/movements?page=3
+            - listitem [ref=f3e390]:
+              - link "4" [ref=f3e391] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/admin/movements?page=4
+            - listitem [ref=f3e392]:
+              - link "5" [ref=f3e393] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/admin/movements?page=5
+            - listitem [ref=f3e394]:
+              - link "6" [ref=f3e395] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/admin/movements?page=6
+            - listitem [ref=f3e396]:
+              - link "7" [ref=f3e397] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/admin/movements?page=7
+            - listitem [ref=f3e398]:
+              - link "8" [ref=f3e399] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/admin/movements?page=8
+            - listitem [ref=f3e400]:
+              - link "9" [ref=f3e401] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/admin/movements?page=9
+            - listitem [ref=f3e402]:
+              - link "10" [ref=f3e403] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/admin/movements?page=10
+            - listitem [ref=f3e404]:
+              - generic [ref=f3e405]: ...
+            - listitem [ref=f3e406]:
+              - link "18" [ref=f3e407] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/admin/movements?page=18
+            - listitem [ref=f3e408]:
+              - link "19" [ref=f3e409] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/admin/movements?page=19
+            - listitem [ref=f3e410]:
+              - link "Siguiente" [ref=f3e411] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/admin/movements?page=2
+  - region "Notifications alt+T":
+    - list
