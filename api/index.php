@@ -19,7 +19,11 @@ require __DIR__.'/../vendor/autoload.php';
 /** @var Application $app */
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
-if (getenv('VERCEL') !== false) {
+// Detect the read-only filesystem by probing it rather than by trusting a
+// platform env var: VERCEL is only present when the project opts into exposing
+// system environment variables, and without the relocation Laravel fails while
+// resolving the view compiler.
+if (! is_writable(__DIR__.'/../storage/framework')) {
     $storagePath = '/tmp/storage';
 
     foreach ([
