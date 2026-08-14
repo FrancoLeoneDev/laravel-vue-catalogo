@@ -5,6 +5,11 @@ public/index.php
 public/hot
 public/storage
 
+# Laravel's package manifest is generated locally with dev dependencies, but
+# Vercel installs with --no-dev. Shipping the stale manifest makes the app boot
+# looking for dev-only providers such as Pail. Let the build regenerate it.
+bootstrap/cache/*.php
+
 node_modules
 tests
 docs
