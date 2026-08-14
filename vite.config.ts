@@ -6,6 +6,11 @@ import laravel from 'laravel-vite-plugin';
 import { bunny } from 'laravel-vite-plugin/fonts';
 import { defineConfig } from 'vite';
 
+// Wayfinder shells out to `php artisan` to regenerate the typed route helpers.
+// Vercel's build image has no PHP, so there the committed helpers are used
+// as-is and generation is skipped.
+const canRunArtisan = !process.env.VERCEL;
+
 export default defineConfig({
     plugins: [
         laravel({
@@ -27,8 +32,12 @@ export default defineConfig({
                 },
             },
         }),
-        wayfinder({
-            formVariants: true,
-        }),
+        ...(canRunArtisan
+            ? [
+                  wayfinder({
+                      formVariants: true,
+                  }),
+              ]
+            : []),
     ],
 });
