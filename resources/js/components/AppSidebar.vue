@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import { Link } from '@inertiajs/vue3';
-import { BookOpen, FolderGit2, LayoutGrid } from '@lucide/vue';
+import {
+    ArrowLeftRight,
+    FolderGit2,
+    FolderTree,
+    LayoutGrid,
+    Package,
+    Store,
+} from '@lucide/vue';
 import AppLogo from '@/components/AppLogo.vue';
 import NavFooter from '@/components/NavFooter.vue';
 import NavMain from '@/components/NavMain.vue';
@@ -14,27 +21,46 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import { dashboard } from '@/routes';
+import { home } from '@/routes';
+import { dashboard } from '@/routes/admin';
+import categories from '@/routes/admin/categories';
+import movements from '@/routes/admin/movements';
+import products from '@/routes/admin/products';
 import type { NavItem } from '@/types';
 
 const mainNavItems: NavItem[] = [
     {
-        title: 'Dashboard',
+        title: 'Panel',
         href: dashboard(),
         icon: LayoutGrid,
+    },
+    {
+        title: 'Productos',
+        href: products.index(),
+        icon: Package,
+    },
+    {
+        title: 'Categorías',
+        href: categories.index(),
+        icon: FolderTree,
+    },
+    {
+        title: 'Movimientos',
+        href: movements.index(),
+        icon: ArrowLeftRight,
     },
 ];
 
 const footerNavItems: NavItem[] = [
     {
-        title: 'Repository',
-        href: 'https://github.com/laravel/vue-starter-kit',
-        icon: FolderGit2,
+        title: 'Ver catálogo público',
+        href: home(),
+        icon: Store,
     },
     {
-        title: 'Documentation',
-        href: 'https://laravel.com/docs/starter-kits#vue',
-        icon: BookOpen,
+        title: 'Código en GitHub',
+        href: 'https://github.com/FrancoLeoneDev/laravel-vue-catalogo',
+        icon: FolderGit2,
     },
 ];
 </script>
