@@ -1,0 +1,13 @@
+# The Vercel front controller is api/index.php. Keeping public/index.php out of
+# the deployment stops it from being served as a static file from the output
+# directory, which would leak the file's source.
+public/index.php
+public/hot
+public/storage
+
+node_modules
+tests
+docs
+storage/logs/*.log
+docker-compose.yml
+.github
